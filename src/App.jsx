@@ -12,10 +12,9 @@ IMPORTANT: Make sure Tailwind config has: darkMode: "class"
 */
 
 import React, { useState, useEffect } from 'react';
-import { FaTiktok, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const ASSETS = {
-	HERO_LIGHT: '/maxim-potkin-_jagF3AakVc-unsplash.jpg', // világos mód háttér
+	HERO_LIGHT: '/ben-duke-2KT5xGoFf3I-unsplash.jpg', // világos mód háttér
 	HERO_DARK: '/tai-s-captures-MU85YmmGzOg-unsplash.jpg', // sötét mód háttér
 	LOGO_LIGHT: '/p_linecardetail_whiteemblem.png',
 	LOGO_DARK: '/p_linecardetail_blackemblem.png',
@@ -23,9 +22,18 @@ const ASSETS = {
 	REF2: '/MercedesBenzGLA200-finish-exterior1.jpeg',
 	REF3: '/VolkswagenPASSAT2.0TDI-interior1.jpeg',
 	REF4: '',
+	TIKTOK:'/tik-tok.png',
+	INSTAGRAM:'/instagram.png',
+	FACEBOOK:'/facebook.png',
 	HOME: '/home-button.png',
 	SUN: '/light.png',
 	MOON: '/moon.png',
+	LOCATION: '/map.png',
+	MOBILE:'/phone.png',
+	EMAIL:'/mail.png',
+	HUNGARY:'/hungary.png',
+	ROMANIA:'/romania.png',
+	ENGLAND:'/united-kingdom.png',
 };
 
 export default function PLineLanding() {
@@ -89,23 +97,30 @@ export default function PLineLanding() {
 			<header className='backdrop-blur-md bg-white/70 dark:bg-gray-900/70 fixed w-full z-40 shadow-sm transition-colors duration-500 ease-in-out'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
-						<div className='flex items-center gap-3'>
-							<button
-								onClick={() =>
-									window.scrollTo({
-										top: 0,
-										behavior: 'smooth',
-									})
-								}
-								className='focus:outline-none'
-								aria-label='Home'
-							>
+						<div className='flex items-center flex-shrink-0'>
+							<div className='items-center gap-2 flex-shrink-0'>
+							<button>
 								<img
-									src={ASSETS.HOME}
-									alt='Home'
-									className='h-8 w-8 object-contain transition-transform duration-300 hover:scale-110'
+									src={ASSETS.HUNGARY}
+									alt='HU'
+									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
 								/>
 							</button>
+							<button>
+								<img
+									src={ASSETS.ROMANIA}
+									alt='RO'
+									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
+								/>
+							</button>
+							<button>
+								<img
+									src={ASSETS.ENGLAND}
+									alt='EN'
+									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
+								/>
+							</button>
+							</div>
 						</div>
 
 						<nav className='hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 dark:text-gray-200 transition-colors duration-500 ease-in-out'>
@@ -145,7 +160,7 @@ export default function PLineLanding() {
 							{/* Dark/Light Mode Toggle */}
 							<button
 								onClick={() => setDarkMode(!darkMode)}
-								className='ml-4 p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out'
+								className='flex-shrink-0 ml-1 p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out'
 								aria-label='Dark mode toggle'
 							>
 								<img
@@ -262,10 +277,7 @@ export default function PLineLanding() {
 							className='mx-auto w-48 md:w-64'
 						/>
 						<p className='mt-2 text-lg text-gray-700 dark:text-gray-300 transition-colors duration-500 ease-in-out'>
-							Japán minőség, magyar kéz által — prémium autóápolás
-							Székelyudvarhelyen. Külső-belső tisztítás,
-							kárpittisztítás és részletgazdag ápolás, ahogy a
-							luxusautók megkívánják.
+							Japán precizitás, magyar szakértelem — prémium autóápolás Székelyudvarhelyen. Külső-belső tisztítás, kárpittisztítás és részletgazdag ápolás a legmagasabb szinten.
 						</p>
 						<div className='mt-2 flex justify-center gap-3'>
 							<button
@@ -298,12 +310,7 @@ export default function PLineLanding() {
 							Bemutatkozás
 						</h2>
 						<p className='mt-4 text-gray-700 dark:text-gray-300 max-w-3xl'>
-							Székelyudvarhelyre költöztem Magyarországról, és a
-							P-Line Car Detailt azért hoztam létre, hogy prémium,
-							mégis személyes autóápolást nyújtsak a környék
-							autótulajdonosainak. A saját Lexusom inspirált —
-							precíz, megbízható és hosszú távon tartós
-							megoldásokat alkalmazok minden autón.
+							Magyarországról érkeztem Székelyudvarhelyre, hogy a P-Line Car Detail révén prémium, mégis személyre szabott autóápolást kínáljak. Saját Lexusom inspirált: precíz, megbízható és tartós megoldások minden autó számára.
 						</p>
 					</div>
 				</section>
@@ -372,19 +379,19 @@ export default function PLineLanding() {
 							a='Átlagosan 2-3 órát vesz igénybe az autó méretétől és állapotától függően.'
 						/>
 						<FAQItem
-							q='Külső és belső takarítást követően is ápoljátok a felületeket?'
+							q='Külső és belső takarítást követően is ápolod a felületeket?'
 							a='Igen, mind a kettő esetben teljes tisztítást, majd ápolást kap a felület.'
 						/>
 						<FAQItem
-							q='Mennyire vagytok alaposak?'
-							a='Mind külső és belső felületeknél is használjuk a speciális ecseteket, hogy a legnehezebben elérhető helyekről is kitudjuk venni a szennyeződéseket.'
+							q='Mennyire vagy alapos?'
+							a='Mind külső, mind belső felületeknél is speciális részletápoló eszközökkel a legapróbb résekből is eltávolítom a szennyeződést.'
 						/>
 						<FAQItem
 							q='Készül kép/videó anyag az autómról?'
 							a='Before/After fénykép vagy videó dokumentáció történik minden szolgáltatásnál, visszatérő ügyfélnél is.'
 						/>
 						<FAQItem
-							q='Vállaltok garanciát?'
+							q='Vállalsz garanciát?'
 							a='Természetesen. Emberek vagyunk, hibázhatunk. Átvételtől számítva 24 órás elégedettségi garanciát vállalok.'
 						/>
 						<FAQItem
@@ -392,7 +399,7 @@ export default function PLineLanding() {
 							a='Szennyeződés maradványnál ingyen kijavítom a kezelt részt.'
 						/>
 						<FAQItem
-							q='Fog bővülni a szolgáltatási körötök?'
+							q='Fog bővülni a szolgáltatási köröd?'
 							a='Mindenképpen. Polirozás és kerámia bevonatok elérhetőek lesznek a jövőben.'
 						/>
 					</div>
@@ -434,46 +441,77 @@ export default function PLineLanding() {
 
 				{/* ELÉRHETŐSÉG */}
 				<section
-					id='elerhetoseg'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ${fadeClass(
-						'elerhetoseg'
-					)}`}
+					id="elerhetoseg"
+					className="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-500 ease-in-out"
 				>
-					<div className='bg-white dark:bg-gray-800 shadow rounded-2xl p-8 md:p-12 transition-colors duration-500 ease-in-out'>
-						<h2 className='text-2xl font-semibold text-gray-900 dark:text-white'>
+					<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+						<h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
 							Elérhetőségek
 						</h2>
-						<p className='mt-4 text-gray-700 dark:text-gray-300'>
-							📍 Székelyudvarhely
-							<br />
-							📞 +40 772 079 191
-							<br />
-							✉️ info@plinecardetail.ro
-						</p>
-						<div className='mt-6 flex gap-6 text-3xl'>
+
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+							{/* Helyszín */}
+							<div className="flex flex-col items-center">
+								<img
+									src={ASSETS.LOCATION}
+									alt="Helyszín ikon"
+									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+								/>
+								<p className="text-gray-700 dark:text-gray-300">
+									Székelyudvarhely, RO
+								</p>
+							</div>
+
+							{/* Mobil */}
+							<div className="flex flex-col items-center">
+								<img
+									src={ASSETS.MOBILE}
+									alt="Telefon ikon"
+									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+								/>
+								<p className="text-gray-700 dark:text-gray-300">
+									+40 772 079 191
+								</p>
+							</div>
+
+							{/* Email */}
+							<div className="flex flex-col items-center">
+								<img
+									src={ASSETS.EMAIL}
+									alt="E-mail ikon"
+									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+								/>
+								<p className="text-gray-700 dark:text-gray-300">
+									info@plinecardetail.ro
+								</p>
+							</div>
+						</div>
+
+						{/* Social Media külön sorban */}
+						<div className="flex justify-center gap-12">
 							<a
-								href='https://www.tiktok.com/@p_linecardetail'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
+								href="https://www.tiktok.com/@p_linecardetail"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
 							>
-								<FaTiktok />
+								<img src={ASSETS.TIKTOK} alt="TikTok" className="w-10 h-10" />
 							</a>
 							<a
-								href='https://www.instagram.com/p_linecardetail/'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
+								href="https://www.instagram.com/p_linecardetail/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
 							>
-								<FaInstagram />
+								<img src={ASSETS.INSTAGRAM} alt="Instagram" className="w-10 h-10" />
 							</a>
 							<a
-								href='#'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
+								href="https://facebook.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
 							>
-								<FaFacebook />
+								<img src={ASSETS.FACEBOOK} alt="Facebook" className="w-10 h-10" />
 							</a>
 						</div>
 					</div>
@@ -490,6 +528,7 @@ export default function PLineLanding() {
 }
 
 /* UI components */
+
 function ServiceCard({ title, desc, price }) {
 	return (
 		<div className='bg-white dark:bg-gray-800 shadow rounded-xl p-6 transition-colors duration-500 ease-in-out'>
