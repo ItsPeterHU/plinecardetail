@@ -12,6 +12,8 @@ IMPORTANT: Make sure Tailwind config has: darkMode: "class"
 */
 
 import React, { useState, useEffect } from 'react';
+import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const ASSETS = {
 	HERO_LIGHT: '/ben-duke-2KT5xGoFf3I-unsplash.jpg', // világos mód háttér
@@ -22,24 +24,25 @@ const ASSETS = {
 	REF2: '/MercedesBenzGLA200-finish-exterior1.jpeg',
 	REF3: '/VolkswagenPASSAT2.0TDI-interior1.jpeg',
 	REF4: '',
-	TIKTOK:'/tik-tok.png',
-	INSTAGRAM:'/instagram.png',
-	FACEBOOK:'/facebook.png',
-	HOME: '/home-button.png',
+	TIKTOK: '/tik-tok.png',
+	INSTAGRAM: '/instagram.png',
+	FACEBOOK: '/facebook.png',
+	HOME: '/up-arrow.png',
 	SUN: '/light.png',
 	MOON: '/moon.png',
 	LOCATION: '/map.png',
-	MOBILE:'/phone.png',
-	EMAIL:'/mail.png',
-	HUNGARY:'/hungary.png',
-	ROMANIA:'/romania.png',
-	ENGLAND:'/united-kingdom.png',
+	MOBILE: '/phone.png',
+	EMAIL: '/mail.png',
+	HUNGARY: '/hungary.png',
+	ROMANIA: '/romania.png',
+	ENGLAND: '/united-kingdom.png',
 };
 
 export default function PLineLanding() {
 	const [open, setOpen] = useState(false);
 	const [darkMode, setDarkMode] = useState(false);
 	const [visibleSections, setVisibleSections] = useState({});
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		if (darkMode) {
@@ -99,27 +102,36 @@ export default function PLineLanding() {
 					<div className='flex items-center justify-between h-16'>
 						<div className='flex items-center flex-shrink-0'>
 							<div className='items-center gap-2 flex-shrink-0'>
-							<button>
-								<img
-									src={ASSETS.HUNGARY}
-									alt='HU'
-									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-								/>
-							</button>
-							<button>
-								<img
-									src={ASSETS.ROMANIA}
-									alt='RO'
-									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-								/>
-							</button>
-							<button>
-								<img
-									src={ASSETS.ENGLAND}
-									alt='EN'
-									className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-								/>
-							</button>
+								<button>
+									<img
+										src={ASSETS.HUNGARY}
+										onClick={() =>
+											i18n.changeLanguage('hu')
+										}
+										alt='HU'
+										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
+									/>
+								</button>
+								<button>
+									<img
+										src={ASSETS.ROMANIA}
+										onClick={() =>
+											i18n.changeLanguage('ro')
+										}
+										alt='RO'
+										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
+									/>
+								</button>
+								<button>
+									<img
+										src={ASSETS.ENGLAND}
+										onClick={() =>
+											i18n.changeLanguage('en')
+										}
+										alt='EN'
+										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
+									/>
+								</button>
 							</div>
 						</div>
 
@@ -128,7 +140,7 @@ export default function PLineLanding() {
 								onClick={() => handleNavClick('#bemutatkozas')}
 								className='hover:text-gray-900 dark:hover:text-white'
 							>
-								Bemutatkozás
+								{t('nav.intro')}
 							</button>
 							<button
 								onClick={() =>
@@ -136,25 +148,25 @@ export default function PLineLanding() {
 								}
 								className='hover:text-gray-900 dark:hover:text-white'
 							>
-								Szolgáltatások
+								{t('nav.services')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#faq')}
 								className='hover:text-gray-900 dark:hover:text-white'
 							>
-								Gyakori kérdések
+								{t('nav.faq')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#referenciak')}
 								className='hover:text-gray-900 dark:hover:text-white'
 							>
-								Referenciák
+								{t('nav.references')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#elerhetoseg')}
 								className='px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800'
 							>
-								Elérhetőségek
+								{t('nav.contact')}
 							</button>
 
 							{/* Dark/Light Mode Toggle */}
@@ -222,7 +234,7 @@ export default function PLineLanding() {
 								onClick={() => handleNavClick('#bemutatkozas')}
 								className='block py-2 text-left'
 							>
-								Bemutatkozás
+								{t('nav.intro')}
 							</button>
 							<button
 								onClick={() =>
@@ -230,25 +242,25 @@ export default function PLineLanding() {
 								}
 								className='block py-2 text-left'
 							>
-								Szolgáltatások
+								{t('nav.services')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#faq')}
 								className='block py-2 text-left'
 							>
-								Gyakori kérdések
+								{t('nav.faq')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#referenciak')}
 								className='block py-2 text-left'
 							>
-								Referenciák
+								{t('nav.references')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#elerhetoseg')}
 								className='block py-2 text-left'
 							>
-								Elérhetőségek
+								{t('nav.contact')}
 							</button>
 						</div>
 					</div>
@@ -277,7 +289,7 @@ export default function PLineLanding() {
 							className='mx-auto w-48 md:w-64'
 						/>
 						<p className='mt-2 text-lg text-gray-700 dark:text-gray-300 transition-colors duration-500 ease-in-out'>
-							Japán precizitás, magyar szakértelem — prémium autóápolás Székelyudvarhelyen. Külső-belső tisztítás, kárpittisztítás és részletgazdag ápolás a legmagasabb szinten.
+							{t('hero.title')}
 						</p>
 						<div className='mt-2 flex justify-center gap-3'>
 							<button
@@ -286,13 +298,13 @@ export default function PLineLanding() {
 								}
 								className='inline-block px-6 py-3 bg-gray-200 border border-gray-300 rounded-md hover:bg-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 dark:text-gray-100 transition-colors duration-500 ease-in-out'
 							>
-								Szolgáltatások
+								{t('nav.services')}
 							</button>
 							<button
 								onClick={() => handleNavClick('#elerhetoseg')}
 								className='inline-block px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white transition-colors duration-500 ease-in-out'
 							>
-								Foglalás & Elérhetőségek
+								{t('nav.booking')}
 							</button>
 						</div>
 					</div>
@@ -307,10 +319,10 @@ export default function PLineLanding() {
 				>
 					<div className='bg-white dark:bg-gray-800 shadow rounded-2xl p-8 md:p-12 transition-colors duration-500 ease-in-out'>
 						<h2 className='text-2xl font-semibold text-gray-900 dark:text-white'>
-							Bemutatkozás
+							{t('nav.intro')}
 						</h2>
 						<p className='mt-4 text-gray-700 dark:text-gray-300 max-w-3xl'>
-							Magyarországról érkeztem Székelyudvarhelyre, hogy a P-Line Car Detail révén prémium, mégis személyre szabott autóápolást kínáljak. Saját Lexusom inspirált: precíz, megbízható és tartós megoldások minden autó számára.
+							{t('hero.subtitle')}
 						</p>
 					</div>
 				</section>
@@ -323,7 +335,7 @@ export default function PLineLanding() {
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
-						Szolgáltatások
+						{t('nav.services')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 						<ServiceCard
@@ -367,7 +379,7 @@ export default function PLineLanding() {
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
-						Gyakori kérdések
+						{t('nav.faq')}
 					</h2>
 					<div className='space-y-4'>
 						<FAQItem
@@ -413,7 +425,7 @@ export default function PLineLanding() {
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
-						Referenciák
+						{t('nav.references')}
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 						<ReferenceCard
@@ -441,77 +453,89 @@ export default function PLineLanding() {
 
 				{/* ELÉRHETŐSÉG */}
 				<section
-					id="elerhetoseg"
-					className="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-500 ease-in-out"
+					id='elerhetoseg'
+					className='py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-500 ease-in-out'
 				>
-					<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-						<h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
-							Elérhetőségek
+					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+						<h2 className='text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12'>
+							{t('nav.contact')}
 						</h2>
 
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+						<div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12'>
 							{/* Helyszín */}
-							<div className="flex flex-col items-center">
+							<div className='flex flex-col items-center'>
 								<img
 									src={ASSETS.LOCATION}
-									alt="Helyszín ikon"
-									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+									alt='Helyszín ikon'
+									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
 								/>
-								<p className="text-gray-700 dark:text-gray-300">
+								<p className='text-gray-700 dark:text-gray-300'>
 									Székelyudvarhely, RO
 								</p>
 							</div>
 
 							{/* Mobil */}
-							<div className="flex flex-col items-center">
+							<div className='flex flex-col items-center'>
 								<img
 									src={ASSETS.MOBILE}
-									alt="Telefon ikon"
-									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+									alt='Telefon ikon'
+									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
 								/>
-								<p className="text-gray-700 dark:text-gray-300">
+								<p className='text-gray-700 dark:text-gray-300'>
 									+40 772 079 191
 								</p>
 							</div>
 
 							{/* Email */}
-							<div className="flex flex-col items-center">
+							<div className='flex flex-col items-center'>
 								<img
 									src={ASSETS.EMAIL}
-									alt="E-mail ikon"
-									className="w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80"
+									alt='E-mail ikon'
+									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
 								/>
-								<p className="text-gray-700 dark:text-gray-300">
+								<p className='text-gray-700 dark:text-gray-300'>
 									info@plinecardetail.ro
 								</p>
 							</div>
 						</div>
 
 						{/* Social Media külön sorban */}
-						<div className="flex justify-center gap-12">
+						<div className='flex justify-center gap-12'>
 							<a
-								href="https://www.tiktok.com/@p_linecardetail"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
+								href='https://www.tiktok.com/@p_linecardetail'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
 							>
-								<img src={ASSETS.TIKTOK} alt="TikTok" className="w-10 h-10" />
+								<img
+									src={ASSETS.TIKTOK}
+									alt='TikTok'
+									className='w-10 h-10'
+								/>
 							</a>
 							<a
-								href="https://www.instagram.com/p_linecardetail/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
+								href='https://www.instagram.com/p_linecardetail/'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
 							>
-								<img src={ASSETS.INSTAGRAM} alt="Instagram" className="w-10 h-10" />
+								<img
+									src={ASSETS.INSTAGRAM}
+									alt='Instagram'
+									className='w-10 h-10'
+								/>
 							</a>
 							<a
-								href="https://facebook.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="transform transition duration-300 hover:scale-110 hover:opacity-80"
+								href='https://facebook.com'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
 							>
-								<img src={ASSETS.FACEBOOK} alt="Facebook" className="w-10 h-10" />
+								<img
+									src={ASSETS.FACEBOOK}
+									alt='Facebook'
+									className='w-10 h-10'
+								/>
 							</a>
 						</div>
 					</div>
@@ -519,9 +543,9 @@ export default function PLineLanding() {
 
 				{/* FOOTER */}
 				<footer className='py-8 text-center text-sm text-gray-500 dark:text-gray-400 transition-colors duration-500 ease-in-out'>
-					© {new Date().getFullYear()} P-Line Car Detail — Japán
-					minőség, magyar kéz által, Székelyföld szívében.
+					© {new Date().getFullYear()} {t('about.text')}
 				</footer>
+				<ScrollToTopButton />
 			</main>
 		</div>
 	);
@@ -570,5 +594,42 @@ function ReferenceCard({ img, title, note }) {
 				</p>
 			</div>
 		</div>
+	);
+}
+
+function ScrollToTopButton() {
+	const [show, setShow] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 200) {
+				setShow(true);
+			} else {
+				setShow(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
+	if (!show) return null;
+
+	return (
+		<button
+			onClick={scrollToTop}
+			className='fixed bottom-6 right-6 p-3 bg-white/80 dark:bg-gray-800/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300'
+			aria-label='Vissza a tetejére'
+		>
+			<img
+				src={ASSETS.HOME}
+				alt='Home'
+				className='w-6 h-6 object-contain'
+			/>
+		</button>
 	);
 }
