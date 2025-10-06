@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "intro": "Bemutatkozás",
+    "services": "Szolgáltatások",
+    "faq": "Gyakori kérdések",
+    "references": "Referenciák",
+    "contact": "Elérhetőségek",
+    "booking": "Foglalás & Elérhetőségek"
+  },
+  "hero": {
+    "title": "Japán precizitás, magyar szakértelem — prémium autóápolás Székelyudvarhelyen. Külső-belső tisztítás, kárpittisztítás és részletgazdag ápolás a legmagasabb szinten.",
+    "subtitle": "A P-Line Car Detail egy szemléletet képvisel: japán precizitás, magyar szakértelem és székelyföldi szív. Tapasztalatomat Magyarországról hozva célom, hogy Székelyudvarhelyen is elérhető legyen a prémium, személyre szabott autóápolás élménye."
+  },
+  "about": {
+    "text": "Japán minőség, magyar kéz által, Székelyföld szívében."
+  }
+}
