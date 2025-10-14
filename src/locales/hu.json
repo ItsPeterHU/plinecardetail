@@ -13,5 +13,61 @@
   },
   "about": {
     "text": "Japán minőség, magyar kéz által, Székelyföld szívében."
+  },
+  "reference": {
+    "ref1": "Teljes külső-belső tisztítás, ápolás és kárpittisztítás.",
+    "ref2": "Teljes külső-belső tisztítás, ápolás és alcantara bőrtisztítás.",
+    "ref3": "Teljes külső-belső tisztítás, ápolás.",
+    "ref4": "Belső tisztítás és ápolás."
+  },
+  "service": {
+    "title1": "Külső mosás",
+    "title2": "Belső takarítás",
+    "title3": "Kárpittisztítás",
+    "title4": "Motortér prémium gondoskodás",
+    "title5": "Felnik felületkezelése",
+    "title6": "Személyre szabott megoldások*",
+    "serv1": "Alapos több lépcsős mosás kézileg befejezve, prémium szerekkel és technikával.",
+    "serv2": "Kárpit, műszerfal és belső elemek tisztítása és ápolása.",
+    "serv3": "Mélytisztítás és folteltávolítás szövet- és bőrfelületeken.",
+    "serv4": "Kímélő tisztítása speciális módszerrel, műanyag és gumifelületek ápolása.",
+    "serv5": "Tisztítás, ápoló bevonat a jobb szennyeződés taszításért és hosszan tartó ragyogásért.",
+    "serv6": "Egyedi kérésekhez igazodva.",
+    "gift1": "150 lei *Bevezető áron*",
+    "gift2": "*Megbeszéltek alapján"
+  },
+  "questions": {
+    "faq1":  {
+      "q1": "Mennyi ideig tart egy teljes külső tisztítás?",
+      "a1": "Átlagosan 1-2 órát vesz igénybe az autó méretétől és állapotától függően."
+    },
+    "faq2":  {
+      "q2": "Mennyi ideig tart egy teljes belső takarítás?",
+      "a2": "Átlagosan 1-2 órát vesz igénybe az autó méretétől és állapotától függően."
+    },
+    "faq3":  {
+      "q3": "Külső és belső takarítást követően is ápolod a felületeket?",
+      "a3": "Igen, mind a kettő esetben teljes tisztítást, majd ápolást kap a felület."
+    },
+    "faq4":  {
+      "q4": "Mennyire vagy alapos?",
+      "a4": "Mind külső, mind belső felületeknél is speciális részletápoló eszközökkel a legapróbb résekből is eltávolítom a szennyeződést."
+    },
+    "faq5":  {
+      "q5": "Készül kép/videó anyag az autómról?",
+      "a5": "Before/After fénykép vagy videó dokumentáció történik minden szolgáltatásnál, visszatérő ügyfélnél is."
+    },
+    "faq6":  {
+      "q6": "Vállalsz garanciát?",
+      "a6": "Természetesen. Emberek vagyunk, hibázhatunk. Átvételtől számítva 24 órás elégedettségi garanciát vállalok."
+    },
+    "faq7":  {
+      "q7": "Mire terjed ki a garancia?",
+      "a7": "Szennyeződés maradványnál ingyen kijavítom a kezelt részt."
+    },
+    "faq8":  {
+      "q8": "Fog bővülni a szolgáltatási köröd?",
+      "a8": "Mindenképpen. Polirozás és kerámia bevonatok elérhetőek lesznek a jövőben."
+    }
   }
 }

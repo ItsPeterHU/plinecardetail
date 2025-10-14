@@ -13,5 +13,61 @@
   },
   "about": {
     "text": "Japanese quality, crafted by Hungarian hands, in the heart of Székely Land."
+  },
+    "reference": {
+    "ref1": "Full exterior and interior cleaning, care, and upholstery cleaning.",
+    "ref2": "Full exterior and interior cleaning, care, and Alcantara leather cleaning.",
+    "ref3": "Full exterior and interior cleaning and care.",
+    "ref4": "Interior cleaning and care."
+  },
+    "service": {
+    "title1": "Exterior wash",
+    "title2": "Interior cleaning",
+    "title3": "Upholstery cleaning",
+    "title4": "Engine bay premium care",
+    "title5": "Wheel surface treatment",
+    "title6": "Customized solutions*",
+    "serv1": "Thorough multi-stage wash, finished by hand with premium products and techniques.",
+    "serv2": "Cleaning and care of upholstery, dashboard, and interior elements.",
+    "serv3": "Deep cleaning and stain removal on fabric and leather surfaces.",
+    "serv4": "Gentle cleaning using specialized methods, with plastic and rubber surface conditioning.",
+    "serv5": "Cleaning and protective coating for improved dirt resistance and long-lasting shine.",
+    "serv6": "Tailored to individual requests.",
+    "gift1": "150 lei *Introductory price*",
+    "gift2": "*Based on prior agreement"
+  },
+  "questions": {
+    "faq1":  {
+      "q1": "How long does a full exterior cleaning take?",
+      "a1": "On average, between 1-2 hours, depending on the size and condition of the vehicle."
+    },
+    "faq2":  {
+      "q2": "How long does a full interior cleaning take?",
+      "a2": "On average, between 1-2 hours, depending on the size and condition of the vehicle."
+    },
+    "faq3":  {
+      "q3": "Do you also treat the surfaces after exterior and interior cleaning?",
+      "a3": "Yes, in both cases all surfaces are fully cleaned and then treated with premium care products."
+    },
+    "faq4":  {
+      "q4": "How thorough are you?",
+      "a4": "For both exterior and interior detailing, I use specialized tools to remove dirt even from the hardest-to-reach areas."
+    },
+    "faq5":  {
+      "q5": "Will photos or videos be taken of my car?",
+      "a5": "Yes, “before and after” photo or video documentation is made for each service, including for returning clients."
+    },
+    "faq6":  {
+      "q6": "Do you offer a guarantee?",
+      "a6": "Absolutely. We're human, mistakes can happen. I provide a 24-hour satisfaction guarantee from the time of vehicle handover."
+    },
+    "faq7":  {
+      "q7": "What does the guarantee cover?",
+      "a7": "If any dirt remains, I will re-clean the treated area free of charge."
+    },
+    "faq8":  {
+      "q8": "Will your range of services expand?",
+      "a8": "Definitely. Polishing and ceramic coating services will be available in the near future."
+    }
   }
 }

@@ -13,5 +13,61 @@
   },
   "about": {
     "text": "Calitate japoneză, prin măiestrie maghiară, în inima Ținutului Secuiesc."
+  },
+    "reference": {
+    "ref1": "Curățare completă exterior-interior, îngrijire și curățare tapițerie.",
+    "ref2": "Curățare completă exterior-interior, îngrijire și curățare piele Alcantara.",
+    "ref3": "Curățare completă exterior-interior și îngrijire.",
+    "ref4": "Curățare și îngrijire interioară."
+  },
+    "service": {
+    "title1": "Spălare exterioară",
+    "title2": "Curățare interioară",
+    "title3": "Curățare tapițerie",
+    "title4": "Îngrijire premium compartiment motor",
+    "title5": "Tratament pentru jante",
+    "title6": "Soluții personalizate*",
+    "serv1": "Spălare minuțioasă în mai multe etape, finalizată manual, cu produse și tehnici premium.",
+    "serv2": "Curățarea și îngrijirea tapițeriei, bordului și elementelor interioare.",
+    "serv3": "Curățare în profunzime și îndepărtarea petelor de pe suprafețe textile și din piele.",
+    "serv4": "Curățare delicată prin metode speciale, urmată de tratarea suprafețelor din plastic și cauciuc.",
+    "serv5": "Curățare și aplicare de strat protector pentru respingerea murdăriei și strălucire de durată.",
+    "serv6": "Adaptate cerințelor individuale.",
+    "gift1": "150 lei *La preț promoțional de lansare*",
+    "gift2": "*În funcție de discuțiile stabilite"
+  },
+  "questions": {
+    "faq1":  {
+      "q1": "Cât durează o curățare completă exterioară?",
+      "a1": "În medie între 1 și 2 ore, în funcție de dimensiunea și starea autovehiculului."
+    },
+    "faq2":  {
+      "q2": "Cât durează o curățare completă interioară?",
+      "a2": "În medie între 1 și 2 ore, în funcție de dimensiunea și starea autovehiculului."
+    },
+    "faq3":  {
+      "q3": "După curățarea exterioară și interioară, tratezi și suprafețele?",
+      "a3": "Da, în ambele cazuri suprafețele sunt complet curățate și apoi tratate cu produse de îngrijire."
+    },
+    "faq4":  {
+      "q4": "Cât de atent ești la detalii?",
+      "a4": "Atât la exterior, cât și la interior, folosesc instrumente profesionale pentru detaliere, eliminând murdăria chiar și din cele mai greu accesibile locuri."
+    },
+    "faq5":  {
+      "q5": "Se fac poze sau filmări cu mașina mea?",
+      "a5": "Da, se realizează documentație foto sau video „înainte și după” pentru fiecare serviciu, inclusiv pentru clienții fideli."
+    },
+    "faq6":  {
+      "q6": "Oferi garanție?",
+      "a6": "Desigur. Suntem oameni, se pot întâmpla greșeli. Ofer garanție de satisfacție de 24 de ore din momentul preluării vehiculului."
+    },
+    "faq7":  {
+      "q7": "Ce acoperă garanția?",
+      "a7": "Dacă rămân urme de murdărie, refac gratuit zona tratată."
+    },
+    "faq8":  {
+      "q8": "Îți vei extinde gama de servicii?",
+      "a8": "Cu siguranță. În viitor vor fi disponibile servicii de polisare și aplicare de coating ceramic."
+    }
   }
 }
