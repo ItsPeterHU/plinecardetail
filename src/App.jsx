@@ -23,7 +23,7 @@ const ASSETS = {
 	REF1: '/LexusIS300h-finish-exterior1.jpeg',
 	REF2: '/MercedesBenzGLA200-finish-exterior1.jpeg',
 	REF3: '/VolkswagenPASSAT2.0TDI-interior1.jpeg',
-	REF4: '',
+	REF4: '/SkodaOCTAVIAexterior1.jpeg',
 	TIKTOK: '/tik-tok.png',
 	INSTAGRAM: '/instagram.png',
 	FACEBOOK: '/facebook.png',
@@ -339,34 +339,34 @@ export default function PLineLanding() {
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 						<ServiceCard
-							title='Külső mosás'
-							desc='Alapos több lépcsős mosás kézileg befejezve, prémium szerekkel és technikával.'
+							title={t('service.title1')}
+							desc={t('service.serv1')}
 							price='50 lei'
 						/>
 						<ServiceCard
-							title='Belső takarítás'
-							desc='Kárpit, műszerfal és belső elemek tisztítása és ápolása.'
+							title={t('service.title2')}
+							desc={t('service.serv2')}
 							price='50 lei'
 						/>
 						<ServiceCard
-							title='Kárpittisztítás'
-							desc='Mélytisztítás és folteltávolítás szövet- és bőrfelületeken.'
-							price='150 lei *Bevezető áron*'
+							title={t('service.title3')}
+							desc={t('service.serv3')}
+							price={t('service.gift1')}
 						/>
 						<ServiceCard
-							title='Motortér prémium gondoskodás'
-							desc='Kímélő tisztítása speciális módszerrel, műanyag és gumifelületek ápolása.'
+							title={t('service.title4')}
+							desc={t('service.serv4')}
 							price='100 lei'
 						/>
 						<ServiceCard
-							title='Felnik felületkezelése'
-							desc='Tisztítás, ápoló bevonat a jobb szennyeződés taszításért és hosszan tartó ragyogásért.'
+							title={t('service.title5')}
+							desc={t('service.serv5')}
 							price='25 lei'
 						/>
 						<ServiceCard
-							title='Személyre szabott megoldások*'
-							desc='Egyedi kérésekhez igazodva.'
-							price='*Megbeszéltek alapján'
+							title={t('service.title6')}
+							desc={t('service.serv6')}
+							price={t('service.gift2')}
 						/>
 					</div>
 				</section>
@@ -383,36 +383,36 @@ export default function PLineLanding() {
 					</h2>
 					<div className='space-y-4'>
 						<FAQItem
-							q='Mennyi ideig tart egy teljes külső tisztítás?'
-							a='Átlagosan 1-2 órát vesz igénybe az autó méretétől és állapotától függően.'
+							q={t('questions.faq1.q1')}
+							a={t('questions.faq1.a1')}
 						/>
 						<FAQItem
-							q='Mennyi ideig tart egy teljes belső takarítás?'
-							a='Átlagosan 2-3 órát vesz igénybe az autó méretétől és állapotától függően.'
+							q={t('questions.faq2.q2')}
+							a={t('questions.faq2.a2')}
 						/>
 						<FAQItem
-							q='Külső és belső takarítást követően is ápolod a felületeket?'
-							a='Igen, mind a kettő esetben teljes tisztítást, majd ápolást kap a felület.'
+							q={t('questions.faq3.q3')}
+							a={t('questions.faq3.a3')}
 						/>
 						<FAQItem
-							q='Mennyire vagy alapos?'
-							a='Mind külső, mind belső felületeknél is speciális részletápoló eszközökkel a legapróbb résekből is eltávolítom a szennyeződést.'
+							q={t('questions.faq4.q4')}
+							a={t('questions.faq4.a4')}
 						/>
 						<FAQItem
-							q='Készül kép/videó anyag az autómról?'
-							a='Before/After fénykép vagy videó dokumentáció történik minden szolgáltatásnál, visszatérő ügyfélnél is.'
+							q={t('questions.faq5.q5')}
+							a={t('questions.faq5.a5')}
 						/>
 						<FAQItem
-							q='Vállalsz garanciát?'
-							a='Természetesen. Emberek vagyunk, hibázhatunk. Átvételtől számítva 24 órás elégedettségi garanciát vállalok.'
+							q={t('questions.faq6.q6')}
+							a={t('questions.faq6.a6')}
 						/>
 						<FAQItem
-							q='Mire terjed ki a garancia?'
-							a='Szennyeződés maradványnál ingyen kijavítom a kezelt részt.'
+							q={t('questions.faq7.q7')}
+							a={t('questions.faq7.a7')}
 						/>
 						<FAQItem
-							q='Fog bővülni a szolgáltatási köröd?'
-							a='Mindenképpen. Polirozás és kerámia bevonatok elérhetőek lesznek a jövőben.'
+							q={t('questions.faq8.q8')}
+							a={t('questions.faq8.a8')}
 						/>
 					</div>
 				</section>
@@ -431,22 +431,22 @@ export default function PLineLanding() {
 						<ReferenceCard
 							img={ASSETS.REF1}
 							title='Lexus IS300h'
-							note='Teljes külső-belső tisztítás, ápolás és kárpittisztítás.'
+							note={t('reference.ref1')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF2}
 							title='Mercedes-Benz GLA200'
-							note='Teljes külső-belső tisztítás, ápolás és alcantara bőrtisztítás.'
+							note={t('reference.ref2')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF3}
 							title='Volkswagen PASSAT 2.0TDI'
-							note='Teljes külső-belső tisztítás, ápolás és kárpittisztítás.'
+							note={t('reference.ref1')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF4}
-							title='Audi RS6'
-							note='Külső mosás, ápolás.'
+							title='Skoda OCTAVIA'
+							note={t('reference.ref3')}
 						/>
 					</div>
 				</section>
@@ -494,7 +494,7 @@ export default function PLineLanding() {
 									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
 								/>
 								<p className='text-gray-700 dark:text-gray-300'>
-									info@plinecardetail.ro
+									info@plinecardetail.com
 								</p>
 							</div>
 						</div>
