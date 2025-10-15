@@ -40,7 +40,7 @@ const ASSETS = {
 
 export default function PLineLanding() {
 	const [open, setOpen] = useState(false);
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(true);
 	const [visibleSections, setVisibleSections] = useState({});
 	const { t } = useTranslation();
 
