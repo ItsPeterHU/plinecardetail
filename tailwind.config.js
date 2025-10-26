@@ -5,7 +5,9 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {fontFamily: {
+      sans: ['Zen Kaku Gothic New', 'sans-serif'],
+    },},
   },
   plugins: [],
-}
+};
