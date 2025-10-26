@@ -1,73 +1,132 @@
 {
   "nav": {
-    "intro": "About",
+    "about": "About",
     "services": "Services",
     "faq": "FAQ",
     "references": "References",
-    "contact": "Contact",
-    "booking": "Booking & Contact"
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Japanese precision, Hungarian craftsmanship — premium car detailing in Odorheiu Secuiesc. Exterior and interior cleaning, upholstery care, and meticulous detailing at the highest level.",
-    "subtitle": "P-Line Car Detail stands for a philosophy: Japanese precision, Hungarian expertise, and Székely heart. With experience gained in Hungary, my goal is to bring premium, personalized car care to Odorheiu Secuiesc — where attention to detail truly matters."
+    "headline": "Japanese precision, Hungarian craftsmanship — premium car care in Odorheiu Secuiesc.",
+    "text": "Full exterior and interior cleaning, upholstery care, and detailed treatment at the highest level.",
+    "cta1": "Services",
+    "cta2": "Booking & Contact"
   },
   "about": {
-    "text": "Japanese quality, crafted by Hungarian hands, in the heart of Székely Land."
+    "title": "About P-Line Car Detail",
+    "text": "P-Line Car Detail stands for a philosophy: Japanese precision, Hungarian expertise, and Székely passion. With experience gained in Hungary, my goal is to bring premium, personalized car care to Odorheiu Secuiesc."
   },
-    "reference": {
-    "ref1": "Full exterior and interior cleaning, care, and upholstery cleaning.",
-    "ref2": "Full exterior and interior cleaning, care, and Alcantara leather cleaning.",
-    "ref3": "Full exterior and interior cleaning and care.",
-    "ref4": "Interior cleaning and care."
-  },
-    "service": {
-    "title1": "Exterior wash",
-    "title2": "Interior cleaning",
-    "title3": "Upholstery cleaning",
-    "title4": "Engine bay premium care",
-    "title5": "Wheel surface treatment",
-    "title6": "Customized solutions*",
-    "serv1": "Thorough multi-stage wash, finished by hand with premium products and techniques.",
-    "serv2": "Cleaning and care of upholstery, dashboard, and interior elements.",
-    "serv3": "Deep cleaning and stain removal on fabric and leather surfaces.",
-    "serv4": "Gentle cleaning using specialized methods, with plastic and rubber surface conditioning.",
-    "serv5": "Cleaning and protective coating for improved dirt resistance and long-lasting shine.",
-    "serv6": "Tailored to individual requests.",
-    "gift1": "150 lei *Introductory price*",
-    "gift2": "*Based on prior agreement"
+  "services": {
+    "title": "Services",
+    "service1": {
+      "name": "Full exterior & interior detailing",
+      "desc": "Complete cleaning, care, and deep upholstery cleaning.",
+      "price": "250 lei"
+    },
+    "service2": {
+      "name": "Full detailing with Alcantara care",
+      "desc": "Comprehensive cleaning and Alcantara maintenance.",
+      "price": "300 lei"
+    },
+    "service3": {
+      "name": "Complete exterior & interior wash",
+      "desc": "Professional cleaning and care of all vehicle surfaces.",
+      "price": "200 lei"
+    },
+    "service4": {
+      "name": "Interior cleaning",
+      "desc": "Vacuuming upholstery, cleaning dashboard and interior elements from dust and dirt. Glass surface cleaning.",
+      "price": "150 lei"
+    },
+    "service5": {
+      "name": "Upholstery cleaning",
+      "desc": "Deep cleaning and stain removal on fabric and leather surfaces.",
+      "price": "250 lei"
+    },
+    "service6": {
+      "name": "Engine bay care",
+      "desc": "Gentle cleaning using special techniques, treatment of plastic and rubber surfaces.",
+      "price": "100 lei"
+    },
+    "service7": {
+      "name": "Exterior care",
+      "desc": "Ceramic shampoo application — refreshes existing protective layers.",
+      "price": "75 lei"
+    },
+    "service8": {
+      "name": "Interior care",
+      "desc": "UV-resistant glossy protective coating.",
+      "price": "75 lei"
+    },
+    "service9": {
+      "name": "Door jamb detailing",
+      "desc": "Cleaning and protecting interior door frame areas.",
+      "price": "50 lei"
+    },
+    "service10": {
+      "name": "Iron & rust removal",
+      "desc": "Eliminates fine rust particles caused by metal dust on car surfaces.",
+      "price": "150 lei"
+    },
+    "service11": {
+      "name": "Wheel care",
+      "desc": "Cleaning and protective coating for long-lasting shine.",
+      "price": "100 lei"
+    },
+    "service12": {
+      "name": "Synthetic wax protection",
+      "desc": "Soft99 Fusso Coat application for long-lasting protection and deep gloss.",
+      "price": "250 lei"
+    }
   },
   "questions": {
-    "faq1":  {
-      "q1": "How long does a full exterior cleaning take?",
-      "a1": "On average, between 1-2 hours, depending on the size and condition of the vehicle."
+    "faq1": {
+      "q": "How long does a full cleaning take?",
+      "a": "On average 1–2 hours, depending on vehicle size and condition."
     },
-    "faq2":  {
-      "q2": "How long does a full interior cleaning take?",
-      "a2": "On average, between 1-2 hours, depending on the size and condition of the vehicle."
+    "faq2": {
+      "q": "How long does a full treatment take?",
+      "a": "On average between 15-30 minutes depending on the service."
     },
-    "faq3":  {
-      "q3": "Do you also treat the surfaces after exterior and interior cleaning?",
-      "a3": "Yes, in both cases all surfaces are fully cleaned and then treated with premium care products."
+    "faq3": {
+      "q": "Which products do you use?",
+      "a": "I work with Koch Chemie — German-made, premium-grade detailing products."
     },
-    "faq4":  {
-      "q4": "How thorough are you?",
-      "a4": "For both exterior and interior detailing, I use specialized tools to remove dirt even from the hardest-to-reach areas."
+    "faq4": {
+      "q": "Which equipment do you use?",
+      "a": "I use BIGBOI professional detailing equipment, made by detailers for detailers."
     },
-    "faq5":  {
-      "q5": "Will photos or videos be taken of my car?",
-      "a5": "Yes, “before and after” photo or video documentation is made for each service, including for returning clients."
+    "faq5": {
+      "q": "Do you take photos or videos?",
+      "a": "Yes, I document every service with Before/After photos or videos, even for regular clients."
     },
-    "faq6":  {
-      "q6": "Do you offer a guarantee?",
-      "a6": "Absolutely. We're human, mistakes can happen. I provide a 24-hour satisfaction guarantee from the time of vehicle handover."
+    "faq6": {
+      "q": "Do you offer a warranty?",
+      "a": "Of course. I offer a 24-hour satisfaction guarantee from handover."
     },
-    "faq7":  {
-      "q7": "What does the guarantee cover?",
-      "a7": "If any dirt remains, I will re-clean the treated area free of charge."
+    "faq7": {
+      "q": "What does the warranty cover?",
+      "a": "If any residue remains, I re-clean the affected area free of charge."
     },
-    "faq8":  {
-      "q8": "Will your range of services expand?",
-      "a8": "Definitely. Polishing and ceramic coating services will be available in the near future."
+    "faq8": {
+      "q": "Will you expand your services?",
+      "a": "Absolutely. Polishing and ceramic coating will be available in the near future."
+    },
+    "faq9": {
+      "q": "Do I need to leave my car?",
+      "a": "It depends on the service — for larger jobs yes, for smaller ones you may wait on-site."
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "Odorheiu Secuiesc, RO",
+    "phone": "+40 772 079 191",
+    "email": "info@plinecardetail.ro",
+    "social": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "footer": "Japanese quality, crafted by Hungarian hands — in the heart of Székelyföld."
   }
 }

@@ -1,73 +1,147 @@
 {
   "nav": {
-    "intro": "Bemutatkozás",
+    "home": "Kezdőlap",
+    "about": "Bemutatkozás",
     "services": "Szolgáltatások",
     "faq": "Gyakori kérdések",
     "references": "Referenciák",
-    "contact": "Elérhetőségek",
-    "booking": "Foglalás & Elérhetőségek"
+    "contact": "Elérhetőségek"
   },
+
   "hero": {
-    "title": "Japán precizitás, magyar szakértelem — prémium autóápolás Székelyudvarhelyen. Külső-belső tisztítás, kárpittisztítás és részletgazdag ápolás a legmagasabb szinten.",
-    "subtitle": "A P-Line Car Detail egy szemléletet képvisel: japán precizitás, magyar szakértelem és székelyföldi szív. Tapasztalatomat Magyarországról hozva célom, hogy Székelyudvarhelyen is elérhető legyen a prémium, személyre szabott autóápolás élménye."
+    "headline": "Japán precizitás, magyar szakértelem — prémium autóápolás Székelyudvarhelyen.",
+    "text": "Külső-belső tisztítás, kárpittisztítás és részletgazdag ápolás a legmagasabb szinten.",
+    "cta1": "Szolgáltatások",
+    "cta2": "Foglalás & Elérhetőségek"
   },
+
   "about": {
-    "text": "Japán minőség, magyar kéz által, Székelyföld szívében."
+    "title": "Bemutatkozás",
+    "text": "A P-Line Car Detail egy szemléletet képvisel: japán precizitás, magyar szakértelem Székelyföld szívében. Magyarországi tapasztalataimat hozva célom, hogy Székelyudvarhelyen is elérhető legyen a prémium, személyre szabott autóápolás élménye."
   },
-  "reference": {
-    "ref1": "Teljes külső-belső tisztítás, ápolás és kárpittisztítás.",
-    "ref2": "Teljes külső-belső tisztítás, ápolás és alcantara bőrtisztítás.",
-    "ref3": "Teljes külső-belső tisztítás, ápolás.",
-    "ref4": "Belső tisztítás és ápolás."
-  },
-  "service": {
-    "title1": "Külső mosás",
-    "title2": "Belső takarítás",
-    "title3": "Kárpittisztítás",
-    "title4": "Motortér prémium gondoskodás",
-    "title5": "Felnik felületkezelése",
-    "title6": "Személyre szabott megoldások*",
-    "serv1": "Alapos több lépcsős mosás kézileg befejezve, prémium szerekkel és technikával.",
-    "serv2": "Kárpit, műszerfal és belső elemek tisztítása és ápolása.",
-    "serv3": "Mélytisztítás és folteltávolítás szövet- és bőrfelületeken.",
-    "serv4": "Kímélő tisztítása speciális módszerrel, műanyag és gumifelületek ápolása.",
-    "serv5": "Tisztítás, ápoló bevonat a jobb szennyeződés taszításért és hosszan tartó ragyogásért.",
-    "serv6": "Egyedi kérésekhez igazodva.",
-    "gift1": "150 lei *Bevezető áron*",
-    "gift2": "*Megbeszéltek alapján"
-  },
-  "questions": {
-    "faq1":  {
-      "q1": "Mennyi ideig tart egy teljes külső tisztítás?",
-      "a1": "Átlagosan 1-2 órát vesz igénybe az autó méretétől és állapotától függően."
+
+  "services": {
+    "title": "Szolgáltatások",
+
+    "service1": {
+      "name": "Külső mosás",
+      "desc": "Alapos, több lépcsős kézi mosás prémium szerekkel és technikával.",
+      "price": "50 lei"
     },
-    "faq2":  {
-      "q2": "Mennyi ideig tart egy teljes belső takarítás?",
-      "a2": "Átlagosan 1-2 órát vesz igénybe az autó méretétől és állapotától függően."
+    "service2": {
+      "name": "Belső tisztítás",
+      "desc": "Kárpit, műszerfal és belső elemek tisztítása portól és szennyeződésektől.",
+      "price": "50 lei"
     },
-    "faq3":  {
-      "q3": "Külső és belső takarítást követően is ápolod a felületeket?",
-      "a3": "Igen, mind a kettő esetben teljes tisztítást, majd ápolást kap a felület."
+    "service3": {
+      "name": "Kárpittisztítás",
+      "desc": "Mélytisztítás és folteltávolítás szövet- és bőrfelületeken.",
+      "price": "250 lei"
     },
-    "faq4":  {
-      "q4": "Mennyire vagy alapos?",
-      "a4": "Mind külső, mind belső felületeknél is speciális részletápoló eszközökkel a legapróbb résekből is eltávolítom a szennyeződést."
+    "service4": {
+      "name": "Motortér prémium gondoskodás",
+      "desc": "Kímélő tisztítás és ápolás a motortér minden elemén.",
+      "price": "150 lei"
     },
-    "faq5":  {
-      "q5": "Készül kép/videó anyag az autómról?",
-      "a5": "Before/After fénykép vagy videó dokumentáció történik minden szolgáltatásnál, visszatérő ügyfélnél is."
+    "service5": {
+      "name": "Felnik felületkezelése",
+      "desc": "Tisztítás, ápolás és védőbevonat a hosszan tartó fényért és könnyebb tisztíthatóságért.",
+      "price": "25 lei"
     },
-    "faq6":  {
-      "q6": "Vállalsz garanciát?",
-      "a6": "Természetesen. Emberek vagyunk, hibázhatunk. Átvételtől számítva 24 órás elégedettségi garanciát vállalok."
+    "service6": {
+      "name": "Ajtóközök felületkezelése",
+      "desc": "Az ajtókeretek és záródási pontok alapos tisztítása, majd védőbevonattal való ápolása.",
+      "price": "25 lei"
     },
-    "faq7":  {
-      "q7": "Mire terjed ki a garancia?",
-      "a7": "Szennyeződés maradványnál ingyen kijavítom a kezelt részt."
+    "service7": {
+      "name": "Röprozsda eltávolítás",
+      "desc": "A fényezésen megtelepedett fémrészecskék és szennyeződések kíméletes, vegyszeres eltávolítása.",
+      "price": "200 lei"
     },
-    "faq8":  {
-      "q8": "Fog bővülni a szolgáltatási köröd?",
-      "a8": "Mindenképpen. Polirozás és kerámia bevonatok elérhetőek lesznek a jövőben."
+    "service8": {
+      "name": "Kárpitápolás",
+      "desc": "Bőr és szövetfelületek ápolása UV-álló, tartós védőréteggel.",
+      "price": "50 lei"
+    },
+    "service9": {
+      "name": "Tartós wax bevonat",
+      "desc": "Hosszú élettartamú, vízlepergető wax, amely mély fényt és tartós védelmet biztosít.",
+      "price": "200 lei"
+    },
+    "service10": {
+      "name": "Külső ápolás",
+      "desc": "Kerámia samponnal történő kezelés, amely frissíti a meglévő védőréteget és fokozza a fényt.",
+      "price": "25 lei"
+    },
+    "service11": {
+      "name": "Belső ápolás",
+      "desc": "UV-álló, fényes védőréteg a műszerfal és belső felületek megóvására.",
+      "price": "25 lei"
+    },
+    "service12": {
+      "name": "Személyre szabott megoldások",
+      "desc": "Egyedi igényekhez és kérésekhez igazított autóápolási szolgáltatások.",
+      "price": "Megbeszélés szerint"
     }
+  },
+
+  "questions": {
+    "faq1": {
+      "q": "Meddig tart a külső/belső tisztítás?",
+      "a": "Átlagosan 1–2 órát vesz igénybe az autó méretétől és állapotától függően."
+    },
+    "faq2": {
+      "q": "Mennyi ideig tart egy ápolás?",
+      "a": "Átlagosan 15–30 percet igényel, az autó méretétől és a felület típusától függően."
+    },
+    "faq3": {
+      "q": "Milyen vegyszerekkel dolgozol?",
+      "a": "Német Koch Chemie termékeket használok, melyek a prémium autóápolás élvonalát képviselik."
+    },
+    "faq4": {
+      "q": "Milyen eszközöket használsz?",
+      "a": "Professzionális, autóápolók által fejlesztett BIGBOI eszközökkel dolgozom, a legjobb eredmény érdekében."
+    },
+    "faq5": {
+      "q": "Készül kép vagy videó az autómról?",
+      "a": "Igen, minden szolgáltatásnál készül Before/After dokumentáció, visszatérő ügyfeleknél is."
+    },
+    "faq6": {
+      "q": "Vállalsz garanciát?",
+      "a": "Igen, minden munkára 24 órás elégedettségi garanciát vállalok az átvételtől számítva."
+    },
+    "faq7": {
+      "q": "Mire terjed ki a garancia?",
+      "a": "Ha a tisztítás után szennyeződés marad, ingyenesen kijavítom az érintett területet."
+    },
+    "faq8": {
+      "q": "Bővülni fog a szolgáltatási köröd?",
+      "a": "Igen, hamarosan elérhető lesz a polírozás és a kerámia bevonat is."
+    },
+    "faq9": {
+      "q": "Kell időpontot foglalni?",
+      "a": "Igen, minden szolgáltatás előzetes időpontfoglalással történik, hogy az autódra a kellő figyelmet tudjam fordítani — várakozás nélkül, személyre szabottan."
+    }
+  },
+
+  "references": {
+    "title": "Referenciák",
+    "ref1": "Teljes külső-belső tisztítás, ápolás és bőrápolás.",
+    "ref2": "Teljes külső-belső tisztítás, ápolás és alcantara bőrtisztítás.",
+    "ref3": "Teljes külső-belső, kárpittisztítás és ápolás.",
+    "ref4": "Külső-belső tisztítás és ápolás."
+  },
+
+  "contact": {
+    "title": "Elérhetőségek",
+    "address": "Székelyudvarhely, RO",
+    "phone": "+40 772 079 191",
+    "email": "info@plinecardetail.ro",
+    "social": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "footer": "Japán minőség, magyar kéz által, Székelyföld szívében."
   }
 }

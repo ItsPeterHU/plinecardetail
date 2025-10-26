@@ -1,73 +1,132 @@
 {
   "nav": {
-    "intro": "Prezentare",
+    "about": "Despre mine",
     "services": "Servicii",
     "faq": "Întrebări frecvente",
     "references": "Referințe",
-    "contact": "Contact",
-    "booking": "Rezervări & Contact"
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Precizie japoneză, măiestrie maghiară — îngrijire auto premium la Odorheiu Secuiesc. Curățare exterioară și interioară, spălare tapițerie și îngrijire în detaliu la cel mai înalt nivel.",
-    "subtitle": "P-Line Car Detail reprezintă o viziune: precizie japoneză, măiestrie maghiară și inimă secuiască. Cu experiența acumulată în Ungaria, scopul meu este ca la Odorheiu Secuiesc să fie accesibilă o îngrijire auto premium, personalizată și atentă la detalii."
+    "headline": "Precizie japoneză, măiestrie maghiară — îngrijire auto premium la Odorheiu Secuiesc.",
+    "text": "Curățare completă exterior-interior, curățare tapițerie și îngrijire detaliată la cel mai înalt nivel.",
+    "cta1": "Servicii",
+    "cta2": "Programare & Contact"
   },
   "about": {
-    "text": "Calitate japoneză, prin măiestrie maghiară, în inima Ținutului Secuiesc."
+    "title": "Despre P-Line Car Detail",
+    "text": "P-Line Car Detail reprezintă o viziune: precizie japoneză, măiestrie maghiară și pasiune secuiască. Cu experiența adusă din Ungaria, scopul meu este să ofer servicii premium de îngrijire auto personalizată aici, la Odorheiu Secuiesc."
   },
-    "reference": {
-    "ref1": "Curățare completă exterior-interior, îngrijire și curățare tapițerie.",
-    "ref2": "Curățare completă exterior-interior, îngrijire și curățare piele Alcantara.",
-    "ref3": "Curățare completă exterior-interior și îngrijire.",
-    "ref4": "Curățare și îngrijire interioară."
-  },
-    "service": {
-    "title1": "Spălare exterioară",
-    "title2": "Curățare interioară",
-    "title3": "Curățare tapițerie",
-    "title4": "Îngrijire premium compartiment motor",
-    "title5": "Tratament pentru jante",
-    "title6": "Soluții personalizate*",
-    "serv1": "Spălare minuțioasă în mai multe etape, finalizată manual, cu produse și tehnici premium.",
-    "serv2": "Curățarea și îngrijirea tapițeriei, bordului și elementelor interioare.",
-    "serv3": "Curățare în profunzime și îndepărtarea petelor de pe suprafețe textile și din piele.",
-    "serv4": "Curățare delicată prin metode speciale, urmată de tratarea suprafețelor din plastic și cauciuc.",
-    "serv5": "Curățare și aplicare de strat protector pentru respingerea murdăriei și strălucire de durată.",
-    "serv6": "Adaptate cerințelor individuale.",
-    "gift1": "150 lei *La preț promoțional de lansare*",
-    "gift2": "*În funcție de discuțiile stabilite"
+  "services": {
+    "title": "Servicii",
+    "service1": {
+      "name": "Curățare completă interior-exterior",
+      "desc": "Curățare, îngrijire și curățare tapițerie în profunzime.",
+      "price": "250 lei"
+    },
+    "service2": {
+      "name": "Curățare completă cu piele Alcantara",
+      "desc": "Curățare, îngrijire și întreținere Alcantara.",
+      "price": "300 lei"
+    },
+    "service3": {
+      "name": "Curățare completă exterior-interior",
+      "desc": "Curățare completă și îngrijire profesională a tuturor suprafețelor.",
+      "price": "200 lei"
+    },
+    "service4": {
+      "name": "Curățare interior",
+      "desc": "Aspirarea tapițeriei, curățarea bordului și a elementelor interioare de praf și murdărie. Curățarea suprafețelor de sticlă.",
+      "price": "150 lei"
+    },
+    "service5": {
+      "name": "Curățare tapițerie",
+      "desc": "Curățare profundă și îndepărtare pete pentru materiale textile și piele.",
+      "price": "250 lei"
+    },
+    "service6": {
+      "name": "Îngrijire compartiment motor",
+      "desc": "Curățare delicată cu metode speciale, îngrijirea suprafețelor din plastic și cauciuc.",
+      "price": "100 lei"
+    },
+    "service7": {
+      "name": "Îngrijire exterior",
+      "desc": "Aplicare șampon ceramic — reîmprospătează protecțiile existente.",
+      "price": "75 lei"
+    },
+    "service8": {
+      "name": "Îngrijire interior",
+      "desc": "Strat protector lucios, rezistent la UV.",
+      "price": "75 lei"
+    },
+    "service9": {
+      "name": "Îngrijirea zonelor ușilor",
+      "desc": "Curățare și protecție pentru zonele interioare ale ușilor.",
+      "price": "50 lei"
+    },
+    "service10": {
+      "name": "Îndepărtare rugină de suprafață",
+      "desc": "Îndepărtarea ruginii fine cauzate de particulele metalice de pe caroserie.",
+      "price": "150 lei"
+    },
+    "service11": {
+      "name": "Îngrijire jante",
+      "desc": "Curățare și aplicare strat protector pentru un aspect strălucitor de durată.",
+      "price": "100 lei"
+    },
+    "service12": {
+      "name": "Protecție ceară sintetică",
+      "desc": "Aplicare ceară Soft99 Fusso Coat pentru protecție de lungă durată și luciu intens.",
+      "price": "250 lei"
+    }
   },
   "questions": {
-    "faq1":  {
-      "q1": "Cât durează o curățare completă exterioară?",
-      "a1": "În medie între 1 și 2 ore, în funcție de dimensiunea și starea autovehiculului."
+    "faq1": {
+      "q": "Cât durează o curățare completă?",
+      "a": "În medie între 1 și 2 ore, în funcție de mărimea și starea vehiculului."
     },
-    "faq2":  {
-      "q2": "Cât durează o curățare completă interioară?",
-      "a2": "În medie între 1 și 2 ore, în funcție de dimensiunea și starea autovehiculului."
+    "faq2": {
+      "q": "Cât durează o îngrijire completă?",
+      "a": "Între 15 și 30 de minute, în funcție de vehicul."
     },
-    "faq3":  {
-      "q3": "După curățarea exterioară și interioară, tratezi și suprafețele?",
-      "a3": "Da, în ambele cazuri suprafețele sunt complet curățate și apoi tratate cu produse de îngrijire."
+    "faq3": {
+      "q": "Cu ce produse lucrezi?",
+      "a": "Folosesc produse germane Koch Chemie — lider în îngrijirea auto premium."
     },
-    "faq4":  {
-      "q4": "Cât de atent ești la detalii?",
-      "a4": "Atât la exterior, cât și la interior, folosesc instrumente profesionale pentru detaliere, eliminând murdăria chiar și din cele mai greu accesibile locuri."
+    "faq4": {
+      "q": "Ce echipamente folosești?",
+      "a": "Utilizez echipamente profesionale BIGBOI, concepute de specialiști pentru specialiști."
     },
-    "faq5":  {
-      "q5": "Se fac poze sau filmări cu mașina mea?",
-      "a5": "Da, se realizează documentație foto sau video „înainte și după” pentru fiecare serviciu, inclusiv pentru clienții fideli."
+    "faq5": {
+      "q": "Se fac fotografii sau clipuri video?",
+      "a": "Da, la fiecare serviciu realizez fotografii sau clipuri Before/After, inclusiv pentru clienți recurenți."
     },
-    "faq6":  {
-      "q6": "Oferi garanție?",
-      "a6": "Desigur. Suntem oameni, se pot întâmpla greșeli. Ofer garanție de satisfacție de 24 de ore din momentul preluării vehiculului."
+    "faq6": {
+      "q": "Oferi garanție pentru lucrările efectuate?",
+      "a": "Da. Ofer garanție de satisfacție de 24 de ore de la predare."
     },
-    "faq7":  {
-      "q7": "Ce acoperă garanția?",
-      "a7": "Dacă rămân urme de murdărie, refac gratuit zona tratată."
+    "faq7": {
+      "q": "Ce acoperă garanția?",
+      "a": "În cazul în care rămâne murdărie, partea respectivă este curățată gratuit."
     },
-    "faq8":  {
-      "q8": "Îți vei extinde gama de servicii?",
-      "a8": "Cu siguranță. În viitor vor fi disponibile servicii de polisare și aplicare de coating ceramic."
+    "faq8": {
+      "q": "Plănuiești extinderea serviciilor?",
+      "a": "Da. În viitor vor fi disponibile servicii de polisare și aplicare de coating ceramic."
+    },
+    "faq9": {
+      "q": "Trebuie să las mașina?",
+      "a": "Depinde de serviciu — la lucrări mai ample, da, dar pentru cele de bază poți aștepta la fața locului."
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "Odorheiu Secuiesc, RO",
+    "phone": "+40 772 079 191",
+    "email": "info@plinecardetail.ro",
+    "social": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "footer": "Calitate japoneză, realizată de mâini maghiare — în inima Ținutului Secuiesc."
   }
 }
