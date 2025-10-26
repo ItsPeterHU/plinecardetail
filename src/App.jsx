@@ -1,212 +1,172 @@
-/*
-P-Line Car Detail Landing Page (single-file React component)
-- Tailwind CSS utility classes are used for styling (assumes Tailwind is set up in the project)
-- Supports Dark/Light mode with a toggle button in navbar
-- Light mode: white and gray shades (default)
-- Dark mode: dark blue/gray premium palette
-- Smooth animated transitions between modes + rotating toggle icon
-- Fade-in animation for sections on scroll
-- Smooth scroll to sections + auto-close mobile menu
-
-IMPORTANT: Make sure Tailwind config has: darkMode: "class"
-*/
-
 import React, { useState, useEffect } from 'react';
-import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
+import {
+	ServiceCard,
+	FAQItem,
+	ReferenceCard,
+	ExpandableSection,
+} from './components';
+import { ASSETS } from './constants';
 
-const ASSETS = {
-	HERO_LIGHT: '/ben-duke-2KT5xGoFf3I-unsplash.jpg', // világos mód háttér
-	HERO_DARK: '/tai-s-captures-MU85YmmGzOg-unsplash.jpg', // sötét mód háttér
-	LOGO_LIGHT: '/p_linecardetail_whiteemblem.png',
-	LOGO_DARK: '/p_linecardetail_blackemblem.png',
-	REF1: '/LexusIS300h-finish-exterior1.jpeg',
-	REF2: '/MercedesBenzGLA200-finish-exterior1.jpeg',
-	REF3: '/VolkswagenPASSAT2.0TDI-interior1.jpeg',
-	REF4: '/SkodaOCTAVIAexterior1.jpeg',
-	TIKTOK: '/tik-tok.png',
-	INSTAGRAM: '/instagram.png',
-	FACEBOOK: '/facebook.png',
-	HOME: '/up-arrow.png',
-	SUN: '/light.png',
-	MOON: '/moon.png',
-	LOCATION: '/map.png',
-	MOBILE: '/phone.png',
-	EMAIL: '/mail.png',
-	HUNGARY: '/hungary.png',
-	ROMANIA: '/romania.png',
-	ENGLAND: '/united-kingdom.png',
-};
+export default function App() {
+	const { t, i18n } = useTranslation();
 
-export default function PLineLanding() {
+	const [darkMode, setDarkMode] = useState(false);
 	const [open, setOpen] = useState(false);
-	const [darkMode, setDarkMode] = useState(true);
-	const [visibleSections, setVisibleSections] = useState({});
-	const { t } = useTranslation();
+	const [scrolled, setScrolled] = useState(false);
+	const [showScrollTop, setShowScrollTop] = useState(false);
 
+	// Görgetés figyelése (átlátszóság + nyíl megjelenés)
 	useEffect(() => {
-		if (darkMode) {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 30);
+			setShowScrollTop(window.scrollY > 200);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	// Sötét mód kapcsoló
+	useEffect(() => {
+		document.documentElement.classList.toggle('dark', darkMode);
 	}, [darkMode]);
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						setVisibleSections((prev) => ({
-							...prev,
-							[entry.target.id]: true,
-						}));
-					}
-				});
-			},
-			{ threshold: 0.2 }
-		);
-
-		document
-			.querySelectorAll('section')
-			.forEach((section) => observer.observe(section));
-
-		return () => observer.disconnect();
-	}, []);
-
-	useEffect(() => {
-		document.documentElement.style.scrollBehavior = 'smooth';
-		return () => {
-			document.documentElement.style.scrollBehavior = 'auto';
-		};
-	}, []);
-
+	// Navigációs gombok lassú görgetése
 	const handleNavClick = (id) => {
-		const el = document.querySelector(id);
-		if (el) el.scrollIntoView({ behavior: 'smooth' });
-		setOpen(false);
+		const section = document.querySelector(id);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+			setOpen(false);
+		}
 	};
 
-	const fadeClass = (id) =>
-		`transition-all duration-1000 ease-out transform ${
-			visibleSections[id]
-				? 'opacity-100 translate-y-0'
-				: 'opacity-0 translate-y-6'
-		}`;
+	// Animációs osztály
+	const fadeClass = () =>
+		'transition-opacity duration-700 ease-in-out opacity-100';
 
 	return (
-		<div className='min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-800 font-sans dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 dark:text-gray-100 transition-colors duration-500 ease-in-out'>
-			{/* NAV */}
-			<header className='backdrop-blur-md bg-white/70 dark:bg-gray-900/70 fixed w-full z-40 shadow-sm transition-colors duration-500 ease-in-out'>
+		<div className='min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500 ease-in-out'>
+			{/* === NAV === */}
+			<header
+				className={`fixed w-full z-40 backdrop-blur-md shadow-sm transition-all duration-500 ease-in-out ${
+					scrolled
+						? 'bg-white/90 dark:bg-gray-900/90 shadow-lg'
+						: 'bg-white/40 dark:bg-gray-900/40'
+				}`}
+			>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='flex items-center justify-between h-16'>
-						<div className='flex items-center flex-shrink-0'>
-							<div className='items-center gap-2 flex-shrink-0'>
-								<button>
-									<img
-										src={ASSETS.HUNGARY}
-										onClick={() =>
-											i18n.changeLanguage('hu')
-										}
-										alt='HU'
-										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-									/>
+						{/* BAL OLDAL */}
+						<h1 className='text-xl font-semibold text-gray-900 dark:text-white'>
+							P-Line Car Detail
+						</h1>
+
+						{/* MENÜ - DESKTOP */}
+						<nav className='hidden lg:flex items-center gap-6 text-sm font-medium text-gray-700 dark:text-gray-200'>
+							{[
+								['#bemutatkozas', t('nav.about')],
+								['#szolgaltatasok', t('nav.services')],
+								['#faq', t('nav.faq')],
+								['#referenciak', t('nav.references')],
+								['#elerhetoseg', t('nav.contact')],
+							].map(([id, label]) => (
+								<button
+									key={id}
+									onClick={() => handleNavClick(id)}
+									className='hover:text-gray-900 dark:hover:text-white transition-colors'
+								>
+									{label}
 								</button>
-								<button>
-									<img
-										src={ASSETS.ROMANIA}
+							))}
+
+							{/* NYELV ZÁSZLÓK */}
+							<div className='flex items-center gap-3 ml-4'>
+								{[
+									['hu', ASSETS.HUNGARY],
+									['ro', ASSETS.ROMANIA],
+									['en', ASSETS.ENGLAND],
+								].map(([lang, flag]) => (
+									<button
+										key={lang}
 										onClick={() =>
-											i18n.changeLanguage('ro')
+											i18n.changeLanguage(lang)
 										}
-										alt='RO'
-										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-									/>
-								</button>
-								<button>
-									<img
-										src={ASSETS.ENGLAND}
-										onClick={() =>
-											i18n.changeLanguage('en')
-										}
-										alt='EN'
-										className={`w-6 h-6 rounded-sm border transition-transform duration-300 hover:scale-110`}
-									/>
-								</button>
+									>
+										<img
+											src={flag}
+											alt={lang}
+											className='h-6 w-6 rounded-full border border-gray-300'
+										/>
+									</button>
+								))}
 							</div>
-						</div>
 
-						<nav className='hidden md:flex items-center gap-6 text-sm font-medium text-gray-700 dark:text-gray-200 transition-colors duration-500 ease-in-out'>
-							<button
-								onClick={() => handleNavClick('#bemutatkozas')}
-								className='hover:text-gray-900 dark:hover:text-white'
-							>
-								{t('nav.intro')}
-							</button>
-							<button
-								onClick={() =>
-									handleNavClick('#szolgaltatasok')
-								}
-								className='hover:text-gray-900 dark:hover:text-white'
-							>
-								{t('nav.services')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#faq')}
-								className='hover:text-gray-900 dark:hover:text-white'
-							>
-								{t('nav.faq')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#referenciak')}
-								className='hover:text-gray-900 dark:hover:text-white'
-							>
-								{t('nav.references')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#elerhetoseg')}
-								className='px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800'
-							>
-								{t('nav.contact')}
-							</button>
-
-							{/* Dark/Light Mode Toggle */}
+							{/* DARK MODE */}
 							<button
 								onClick={() => setDarkMode(!darkMode)}
-								className='flex-shrink-0 ml-1 p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out'
+								className='ml-4 relative p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out group'
 								aria-label='Dark mode toggle'
 							>
 								<img
 									src={darkMode ? ASSETS.SUN : ASSETS.MOON}
-									alt='mode switch'
-									className={`w-6 h-6 transform transition-transform duration-500 ${
-										darkMode ? 'rotate-180' : 'rotate-0'
-									}`}
+									alt='mode'
+									className={`w-6 h-6 transform transition-all duration-700 ease-in-out 
+										${darkMode 
+											? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_8px_#facc15]' // napfény effekt
+											: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_6px_#60a5fa]' // holdfény effekt
+										}`}
 								/>
 							</button>
 						</nav>
 
-						<div className='md:hidden flex items-center gap-2'>
+						{/* MOBIL MENÜ */}
+						<div className='lg:hidden flex items-center gap-2'>
+							{/* ZÁSZLÓK MOBILRA */}
+							<div className='flex items-center gap-2'>
+								{[
+									['hu', ASSETS.HUNGARY],
+									['ro', ASSETS.ROMANIA],
+									['en', ASSETS.ENGLAND],
+								].map(([lang, flag]) => (
+									<button
+										key={lang}
+										onClick={() =>
+											i18n.changeLanguage(lang)
+										}
+									>
+										<img
+											src={flag}
+											alt={lang}
+											className='h-5 w-5 rounded-full border border-gray-300'
+										/>
+									</button>
+								))}
+							</div>
+
+							{/* DARK MODE - MOBILE */}
 							<button
 								onClick={() => setDarkMode(!darkMode)}
-								className='p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out'
+								className='p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out group'
 								aria-label='Dark mode toggle'
 							>
 								<img
 									src={darkMode ? ASSETS.SUN : ASSETS.MOON}
-									alt='mode switch'
-									className={`w-6 h-6 transform transition-transform duration-500 ${
-										darkMode ? 'rotate-180' : 'rotate-0'
-									}`}
+									alt='mode'
+									className={`w-6 h-6 transform transition-all duration-700 ease-in-out 
+										${darkMode
+											? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_6px_#facc15]'
+											: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_5px_#60a5fa]'
+										}`}
 								/>
 							</button>
 
+							{/* SZENDVICSMENÜ */}
 							<button
 								onClick={() => setOpen(!open)}
-								aria-label='menu'
 								className='p-2 rounded-md'
 							>
 								<svg
-									className='w-6 h-6 text-gray-700 dark:text-gray-200 transition-colors duration-500 ease-in-out'
+									className='w-6 h-6 text-gray-700 dark:text-gray-200'
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -227,51 +187,51 @@ export default function PLineLanding() {
 					</div>
 				</div>
 
+				{/* MOBIL LENYÍLÓ MENÜ */}
 				{open && (
-					<div className='md:hidden px-4 pb-4 bg-white/90 dark:bg-gray-900/90 transition-colors duration-500 ease-in-out'>
+					<div className='md:hidden px-4 pb-4 bg-white/90 dark:bg-gray-900/90'>
 						<div className='flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200'>
-							<button
-								onClick={() => handleNavClick('#bemutatkozas')}
-								className='block py-2 text-left'
-							>
-								{t('nav.intro')}
-							</button>
-							<button
-								onClick={() =>
-									handleNavClick('#szolgaltatasok')
-								}
-								className='block py-2 text-left'
-							>
-								{t('nav.services')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#faq')}
-								className='block py-2 text-left'
-							>
-								{t('nav.faq')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#referenciak')}
-								className='block py-2 text-left'
-							>
-								{t('nav.references')}
-							</button>
-							<button
-								onClick={() => handleNavClick('#elerhetoseg')}
-								className='block py-2 text-left'
-							>
-								{t('nav.contact')}
-							</button>
+							{[
+								['#bemutatkozas', t('nav.about')],
+								['#szolgaltatasok', t('nav.services')],
+								['#faq', t('nav.faq')],
+								['#referenciak', t('nav.references')],
+								['#elerhetoseg', t('nav.contact')],
+							].map(([id, label]) => (
+								<button
+									key={id}
+									onClick={() => handleNavClick(id)}
+									className='block py-2 text-left'
+								>
+									{label}
+								</button>
+							))}
 						</div>
 					</div>
 				)}
 			</header>
 
-			{/* HERO */}
+			{/* === FELGÖRGETŐ GOMB === */}
+			{showScrollTop && (
+				<button
+					onClick={() =>
+						window.scrollTo({ top: 0, behavior: 'smooth' })
+					}
+					className='z-[9999] fixed bottom-6 right-6 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all duration-300'
+				>
+					<img
+						src={ASSETS.HOME}
+						alt='Scroll to top'
+						className='w-6 h-6'
+					/>
+				</button>
+			)}
+
+			{/* === HERO + TÖBBI SZEKCIÓ === */}
 			<main className='pt-20'>
 				<section
 					id='hero'
-					className='relative flex items-center justify-center py-12 transition-colors duration-500 ease-in-out'
+					className='relative min-h-[65vh] flex items-center justify-center transition-colors duration-500 ease-in-out'
 					style={{
 						backgroundImage: `url('${
 							darkMode ? ASSETS.HERO_DARK : ASSETS.HERO_LIGHT
@@ -280,31 +240,41 @@ export default function PLineLanding() {
 						backgroundPosition: 'center',
 					}}
 				>
-					<div className='bg-white/50 dark:bg-gray-900/70 rounded-xl p-1 md:p-8 shadow transition-colors duration-500 ease-in-out backdrop-blur-sm text-center max-w-2xl mx-auto'>
+					<div className='max-w-3xl mx-auto px-3 py-1 bg-white/50 dark:bg-gray-900/70 rounded-xl shadow backdrop-blur-sm text-center transition-colors duration-500 ease-in-out'>
 						<img
 							src={
 								darkMode ? ASSETS.LOGO_LIGHT : ASSETS.LOGO_DARK
 							}
 							alt='P-Line Car Detail logo'
-							className='mx-auto w-48 md:w-64'
+							className='mx-auto mb-1 w-48 md:w-64'
 						/>
-						<p className='mt-2 text-lg text-gray-700 dark:text-gray-300 transition-colors duration-500 ease-in-out'>
-							{t('hero.title')}
+						<p className='text-lg text-gray-800 dark:text-gray-200'>
+							{t('hero.headline')}
 						</p>
-						<div className='mt-2 flex justify-center gap-3'>
+						<p className='mt-2 text-gray-600 dark:text-gray-400'>
+							{t('hero.text')}
+						</p>
+
+						<div className='mt-6 flex justify-center gap-3'>
 							<button
 								onClick={() =>
-									handleNavClick('#szolgaltatasok')
+									document
+										.getElementById('szolgaltatasok')
+										.scrollIntoView({ behavior: 'smooth' })
 								}
-								className='inline-block px-6 py-3 bg-gray-200 border border-gray-300 rounded-md hover:bg-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 dark:text-gray-100 transition-colors duration-500 ease-in-out'
+								className='px-6 py-3 bg-gray-200 border border-gray-300 rounded-md hover:bg-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:hover:bg-gray-700 dark:text-gray-100 transition-colors'
 							>
-								{t('nav.services')}
+								{t('hero.cta1')}
 							</button>
 							<button
-								onClick={() => handleNavClick('#elerhetoseg')}
-								className='inline-block px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white transition-colors duration-500 ease-in-out'
+								onClick={() =>
+									document
+										.getElementById('elerhetoseg')
+										.scrollIntoView({ behavior: 'smooth' })
+								}
+								className='px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white transition-colors'
 							>
-								{t('nav.booking')}
+								{t('hero.cta2')}
 							</button>
 						</div>
 					</div>
@@ -313,16 +283,14 @@ export default function PLineLanding() {
 				{/* BEMUTATKOZÁS */}
 				<section
 					id='bemutatkozas'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ${fadeClass(
-						'bemutatkozas'
-					)}`}
+					className={`w-full flex justify-center py-16 text-center ${fadeClass('bemutatkozas')}`}
 				>
-					<div className='bg-white dark:bg-gray-800 shadow rounded-2xl p-8 md:p-12 transition-colors duration-500 ease-in-out'>
-						<h2 className='text-2xl font-semibold text-gray-900 dark:text-white'>
-							{t('nav.intro')}
+					<div className='max-w-3xl px-4'>
+						<h2 className='text-2xl font-semibold mb-6 text-gray-900 dark:text-white'>
+							{t('about.title')}
 						</h2>
-						<p className='mt-4 text-gray-700 dark:text-gray-300 max-w-3xl'>
-							{t('hero.subtitle')}
+						<p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
+							{t('about.text')}
 						</p>
 					</div>
 				</section>
@@ -330,306 +298,129 @@ export default function PLineLanding() {
 				{/* SZOLGÁLTATÁSOK */}
 				<section
 					id='szolgaltatasok'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ${fadeClass(
+					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center ${fadeClass(
 						'szolgaltatasok'
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
-						{t('nav.services')}
+						{t('services.title')}
 					</h2>
-					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-						<ServiceCard
-							title={t('service.title1')}
-							desc={t('service.serv1')}
-							price='50 lei'
-						/>
-						<ServiceCard
-							title={t('service.title2')}
-							desc={t('service.serv2')}
-							price='50 lei'
-						/>
-						<ServiceCard
-							title={t('service.title3')}
-							desc={t('service.serv3')}
-							price={t('service.gift1')}
-						/>
-						<ServiceCard
-							title={t('service.title4')}
-							desc={t('service.serv4')}
-							price='100 lei'
-						/>
-						<ServiceCard
-							title={t('service.title5')}
-							desc={t('service.serv5')}
-							price='25 lei'
-						/>
-						<ServiceCard
-							title={t('service.title6')}
-							desc={t('service.serv6')}
-							price={t('service.gift2')}
-						/>
-					</div>
+
+					<ExpandableSection
+						sectionId='szolgaltatasok'
+						items={[
+							...Array.from({ length: 12 }, (_, i) => ({
+								title: t(`services.service${i + 1}.name`),
+								desc: t(`services.service${i + 1}.desc`),
+								price: t(`services.service${i + 1}.price`),
+							})),
+						]}
+						initialCount={3}
+						renderItem={(item) => (
+							<ServiceCard
+								title={item.title}
+								desc={item.desc}
+								info={item.price}
+							/>
+						)}
+					/>
 				</section>
 
 				{/* GYAKORI KÉRDÉSEK */}
 				<section
 					id='faq'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ${fadeClass(
+					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center ${fadeClass(
 						'faq'
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
 						{t('nav.faq')}
 					</h2>
-					<div className='space-y-4'>
-						<FAQItem
-							q={t('questions.faq1.q1')}
-							a={t('questions.faq1.a1')}
-						/>
-						<FAQItem
-							q={t('questions.faq2.q2')}
-							a={t('questions.faq2.a2')}
-						/>
-						<FAQItem
-							q={t('questions.faq3.q3')}
-							a={t('questions.faq3.a3')}
-						/>
-						<FAQItem
-							q={t('questions.faq4.q4')}
-							a={t('questions.faq4.a4')}
-						/>
-						<FAQItem
-							q={t('questions.faq5.q5')}
-							a={t('questions.faq5.a5')}
-						/>
-						<FAQItem
-							q={t('questions.faq6.q6')}
-							a={t('questions.faq6.a6')}
-						/>
-						<FAQItem
-							q={t('questions.faq7.q7')}
-							a={t('questions.faq7.a7')}
-						/>
-						<FAQItem
-							q={t('questions.faq8.q8')}
-							a={t('questions.faq8.a8')}
-						/>
-					</div>
+
+					<ExpandableSection
+						sectionId='faq'
+						items={Array.from({ length: 9 }, (_, i) => ({
+							q: t(`questions.faq${i + 1}.q`),
+							a: t(`questions.faq${i + 1}.a`),
+						}))}
+						initialCount={3}
+						renderItem={(item, index) => (
+							<FAQItem key={index} q={item.q} a={item.a} />
+						)}
+					/>
 				</section>
 
 				{/* REFERENCIÁK */}
 				<section
 					id='referenciak'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 ${fadeClass(
+					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center ${fadeClass(
 						'referenciak'
 					)}`}
 				>
 					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
 						{t('nav.references')}
 					</h2>
+
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 						<ReferenceCard
 							img={ASSETS.REF1}
 							title='Lexus IS300h'
-							note={t('reference.ref1')}
+							note={t('references.ref1')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF2}
 							title='Mercedes-Benz GLA200'
-							note={t('reference.ref2')}
+							note={t('references.ref2')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF3}
 							title='Volkswagen PASSAT 2.0TDI'
-							note={t('reference.ref1')}
+							note={t('references.ref3')}
 						/>
 						<ReferenceCard
 							img={ASSETS.REF4}
 							title='Skoda OCTAVIA'
-							note={t('reference.ref3')}
+							note={t('references.ref4')}
 						/>
 					</div>
 				</section>
 
-				{/* ELÉRHETŐSÉG */}
-				<section
-					id='elerhetoseg'
-					className='py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-500 ease-in-out'
-				>
-					<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-						<h2 className='text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12'>
-							{t('nav.contact')}
-						</h2>
+{/* ELÉRHETŐSÉGEK */}
+<section
+	id='elerhetoseg'
+	className='w-full flex justify-center py-16 text-center text-gray-900 dark:text-white'
+>
+	<div className='max-w-4xl w-full px-4'>
+		<h2 className='text-2xl font-semibold mb-8'>
+			{t('contact.title')}
+		</h2>
 
-						<div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12'>
-							{/* Helyszín */}
-							<div className='flex flex-col items-center'>
-								<img
-									src={ASSETS.LOCATION}
-									alt='Helyszín ikon'
-									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
-								/>
-								<p className='text-gray-700 dark:text-gray-300'>
-									Székelyudvarhely, RO
-								</p>
-							</div>
+		<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center'>
+			<div className='flex flex-col gap-2'>
+				<p>{t('contact.address')}</p>
+				<p>{t('contact.phone')}</p>
+				<p>{t('contact.email')}</p>
+			</div>
 
-							{/* Mobil */}
-							<div className='flex flex-col items-center'>
-								<img
-									src={ASSETS.MOBILE}
-									alt='Telefon ikon'
-									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
-								/>
-								<p className='text-gray-700 dark:text-gray-300'>
-									+40 772 079 191
-								</p>
-							</div>
-
-							{/* Email */}
-							<div className='flex flex-col items-center'>
-								<img
-									src={ASSETS.EMAIL}
-									alt='E-mail ikon'
-									className='w-12 h-12 mb-4 transform transition duration-300 hover:scale-110 hover:opacity-80'
-								/>
-								<p className='text-gray-700 dark:text-gray-300'>
-									info@plinecardetail.com
-								</p>
-							</div>
-						</div>
-
-						{/* Social Media külön sorban */}
-						<div className='flex justify-center gap-12'>
-							<a
-								href='https://www.tiktok.com/@p_linecardetail'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
-							>
-								<img
-									src={ASSETS.TIKTOK}
-									alt='TikTok'
-									className='w-10 h-10'
-								/>
-							</a>
-							<a
-								href='https://www.instagram.com/p_linecardetail/'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
-							>
-								<img
-									src={ASSETS.INSTAGRAM}
-									alt='Instagram'
-									className='w-10 h-10'
-								/>
-							</a>
-							<a
-								href='https://facebook.com'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='transform transition duration-300 hover:scale-110 hover:opacity-80'
-							>
-								<img
-									src={ASSETS.FACEBOOK}
-									alt='Facebook'
-									className='w-10 h-10'
-								/>
-							</a>
-						</div>
-					</div>
-				</section>
-
-				{/* FOOTER */}
-				<footer className='py-8 text-center text-sm text-gray-500 dark:text-gray-400 transition-colors duration-500 ease-in-out'>
-					© {new Date().getFullYear()} {t('about.text')}
-				</footer>
-				<ScrollToTopButton />
-			</main>
-		</div>
-	);
-}
-
-/* UI components */
-
-function ServiceCard({ title, desc, price }) {
-	return (
-		<div className='bg-white dark:bg-gray-800 shadow rounded-xl p-6 transition-colors duration-500 ease-in-out'>
-			<h3 className='font-semibold text-gray-900 dark:text-white'>
-				{title}
-			</h3>
-			<p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
-				{desc}
-			</p>
-			<p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
-				{price}
-			</p>
-		</div>
-	);
-}
-
-function FAQItem({ q, a }) {
-	return (
-		<div className='bg-white dark:bg-gray-800 shadow rounded-xl p-5 transition-colors duration-500 ease-in-out'>
-			<h4 className='font-medium text-gray-900 dark:text-white'>{q}</h4>
-			<p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>{a}</p>
-		</div>
-	);
-}
-
-function ReferenceCard({ img, title, note }) {
-	return (
-		<div className='bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden transition-colors duration-500 ease-in-out'>
-			<div
-				className='h-48 bg-cover bg-center'
-				style={{ backgroundImage: `url('${img}')` }}
-			></div>
-			<div className='p-4'>
-				<h4 className='font-semibold text-gray-900 dark:text-white'>
-					{title}
-				</h4>
-				<p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
-					{note}
-				</p>
+			<div className='flex flex-col gap-3'>
+				<a href='#' className='hover:underline'>
+					{t('contact.social.tiktok')}
+				</a>
+				<a href='#' className='hover:underline'>
+					{t('contact.social.instagram')}
+				</a>
+				<a href='#' className='hover:underline'>
+					{t('contact.social.facebook')}
+				</a>
 			</div>
 		</div>
-	);
-}
 
-function ScrollToTopButton() {
-	const [show, setShow] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 200) {
-				setShow(true);
-			} else {
-				setShow(false);
-			}
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
-
-	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
-
-	if (!show) return null;
-
-	return (
-		<button
-			onClick={scrollToTop}
-			className='fixed bottom-6 right-6 p-3 bg-white/80 dark:bg-gray-800/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300'
-			aria-label='Vissza a tetejére'
-		>
-			<img
-				src={ASSETS.HOME}
-				alt='Home'
-				className='w-6 h-6 object-contain'
-			/>
-		</button>
+		<p className='mt-12 text-center text-gray-600 dark:text-gray-400'>
+			{t('contact.footer')}
+		</p>
+	</div>
+</section>
+			</main>
+		</div>
 	);
 }
