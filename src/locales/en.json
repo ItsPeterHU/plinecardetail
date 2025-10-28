@@ -6,79 +6,84 @@
     "references": "References",
     "contact": "Contact"
   },
+
   "hero": {
     "headline": "Japanese precision, Hungarian craftsmanship — premium car care in Odorheiu Secuiesc.",
     "text": "Full exterior and interior cleaning, upholstery care, and detailed treatment at the highest level.",
     "cta1": "Services",
     "cta2": "Booking & Contact"
   },
+
   "about": {
     "title": "About P-Line Car Detail",
     "text": "P-Line Car Detail stands for a philosophy: Japanese precision, Hungarian expertise, and Székely passion. With experience gained in Hungary, my goal is to bring premium, personalized car care to Odorheiu Secuiesc."
   },
+
   "services": {
     "title": "Services",
+
     "service1": {
-      "name": "Full exterior & interior detailing",
-      "desc": "Complete cleaning, care, and deep upholstery cleaning.",
-      "price": "250 lei"
+      "name": "Exterior Wash",
+      "desc": "Thorough, multi-step hand wash using premium products and techniques.",
+      "price": "50 lei"
     },
     "service2": {
-      "name": "Full detailing with Alcantara care",
-      "desc": "Comprehensive cleaning and Alcantara maintenance.",
-      "price": "300 lei"
+      "name": "Interior Cleaning",
+      "desc": "Cleaning of upholstery, dashboard, and interior components from dust and dirt.",
+      "price": "50 lei"
     },
     "service3": {
-      "name": "Complete exterior & interior wash",
-      "desc": "Professional cleaning and care of all vehicle surfaces.",
-      "price": "200 lei"
-    },
-    "service4": {
-      "name": "Interior cleaning",
-      "desc": "Vacuuming upholstery, cleaning dashboard and interior elements from dust and dirt. Glass surface cleaning.",
-      "price": "150 lei"
-    },
-    "service5": {
-      "name": "Upholstery cleaning",
+      "name": "Upholstery Cleaning",
       "desc": "Deep cleaning and stain removal on fabric and leather surfaces.",
       "price": "250 lei"
     },
-    "service6": {
-      "name": "Engine bay care",
-      "desc": "Gentle cleaning using special techniques, treatment of plastic and rubber surfaces.",
-      "price": "100 lei"
-    },
-    "service7": {
-      "name": "Exterior care",
-      "desc": "Ceramic shampoo application — refreshes existing protective layers.",
-      "price": "75 lei"
-    },
-    "service8": {
-      "name": "Interior care",
-      "desc": "UV-resistant glossy protective coating.",
-      "price": "75 lei"
-    },
-    "service9": {
-      "name": "Door jamb detailing",
-      "desc": "Cleaning and protecting interior door frame areas.",
-      "price": "50 lei"
-    },
-    "service10": {
-      "name": "Iron & rust removal",
-      "desc": "Eliminates fine rust particles caused by metal dust on car surfaces.",
+    "service4": {
+      "name": "Engine Bay Premium Care",
+      "desc": "Gentle cleaning and protection of all engine bay components.",
       "price": "150 lei"
     },
+    "service5": {
+      "name": "Wheel Surface Treatment",
+      "desc": "Cleaning, conditioning, and protective coating for lasting shine and easier maintenance.",
+      "price": "25 lei"
+    },
+    "service6": {
+      "name": "Door Frame Detailing",
+      "desc": "Thorough cleaning of door frames and hinges, followed by protective treatment.",
+      "price": "25 lei"
+    },
+    "service7": {
+      "name": "Iron & Rust Particle Removal",
+      "desc": "Gentle chemical removal of embedded metal and rust particles from paint surfaces.",
+      "price": "200 lei"
+    },
+    "service8": {
+      "name": "Upholstery Care",
+      "desc": "Leather and fabric treatment with UV-resistant, long-lasting protection layer.",
+      "price": "50 lei"
+    },
+    "service9": {
+      "name": "Durable Wax Coating",
+      "desc": "Long-lasting, water-repellent wax for deep gloss and extended surface protection.",
+      "price": "200 lei"
+    },
+    "service10": {
+      "name": "Exterior Care",
+      "desc": "Ceramic shampoo treatment that refreshes existing protection and enhances shine.",
+      "price": "25 lei"
+    },
     "service11": {
-      "name": "Wheel care",
-      "desc": "Cleaning and protective coating for long-lasting shine.",
-      "price": "100 lei"
+      "name": "Interior Care",
+      "desc": "UV-resistant glossy protective layer for dashboard and interior surfaces.",
+      "price": "25 lei"
     },
     "service12": {
-      "name": "Synthetic wax protection",
-      "desc": "Soft99 Fusso Coat application for long-lasting protection and deep gloss.",
-      "price": "250 lei"
+      "name": "Custom Solutions",
+      "desc": "Tailored car care services based on your specific needs.",
+      "price": "As agreed"
     }
   },
+
   "questions": {
     "faq1": {
       "q": "How long does a full cleaning take?",
@@ -117,6 +122,15 @@
       "a": "It depends on the service — for larger jobs yes, for smaller ones you may wait on-site."
     }
   },
+
+  "references": {
+    "title": "References",
+    "ref1": "Full exterior and interior cleaning, care, and leather treatment.",
+    "ref2": "Full exterior and interior cleaning, care, and Alcantara leather cleaning.",
+    "ref3": "Full exterior and interior cleaning with upholstery care and maintenance.",
+    "ref4": "Exterior and interior cleaning and care."
+  },
+
   "contact": {
     "title": "Contact",
     "address": "Odorheiu Secuiesc, RO",

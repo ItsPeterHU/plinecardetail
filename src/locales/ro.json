@@ -6,79 +6,84 @@
     "references": "Referințe",
     "contact": "Contact"
   },
+
   "hero": {
     "headline": "Precizie japoneză, măiestrie maghiară — îngrijire auto premium la Odorheiu Secuiesc.",
     "text": "Curățare completă exterior-interior, curățare tapițerie și îngrijire detaliată la cel mai înalt nivel.",
     "cta1": "Servicii",
     "cta2": "Programare & Contact"
   },
+
   "about": {
     "title": "Despre P-Line Car Detail",
     "text": "P-Line Car Detail reprezintă o viziune: precizie japoneză, măiestrie maghiară și pasiune secuiască. Cu experiența adusă din Ungaria, scopul meu este să ofer servicii premium de îngrijire auto personalizată aici, la Odorheiu Secuiesc."
   },
+
   "services": {
     "title": "Servicii",
+
     "service1": {
-      "name": "Curățare completă interior-exterior",
-      "desc": "Curățare, îngrijire și curățare tapițerie în profunzime.",
-      "price": "250 lei"
+      "name": "Spălare exterioară",
+      "desc": "Spălare manuală în mai multe etape, folosind produse și tehnici premium.",
+      "price": "50 lei"
     },
     "service2": {
-      "name": "Curățare completă cu piele Alcantara",
-      "desc": "Curățare, îngrijire și întreținere Alcantara.",
-      "price": "300 lei"
+      "name": "Curățare interioară",
+      "desc": "Curățarea tapițeriei, bordului și elementelor interioare de praf și murdărie.",
+      "price": "50 lei"
     },
     "service3": {
-      "name": "Curățare completă exterior-interior",
-      "desc": "Curățare completă și îngrijire profesională a tuturor suprafețelor.",
-      "price": "200 lei"
+      "name": "Curățare tapițerie",
+      "desc": "Curățare profundă și îndepărtare a petelor de pe suprafețele textile și din piele.",
+      "price": "250 lei"
     },
     "service4": {
-      "name": "Curățare interior",
-      "desc": "Aspirarea tapițeriei, curățarea bordului și a elementelor interioare de praf și murdărie. Curățarea suprafețelor de sticlă.",
+      "name": "Îngrijire premium compartiment motor",
+      "desc": "Curățare delicată și protejare a tuturor componentelor din compartimentul motor.",
       "price": "150 lei"
     },
     "service5": {
-      "name": "Curățare tapițerie",
-      "desc": "Curățare profundă și îndepărtare pete pentru materiale textile și piele.",
-      "price": "250 lei"
+      "name": "Îngrijire jante",
+      "desc": "Curățare, îngrijire și aplicare de strat protector pentru un luciu de durată și curățare ușoară.",
+      "price": "25 lei"
     },
     "service6": {
-      "name": "Îngrijire compartiment motor",
-      "desc": "Curățare delicată cu metode speciale, îngrijirea suprafețelor din plastic și cauciuc.",
-      "price": "100 lei"
+      "name": "Curățare și protejare praguri uși",
+      "desc": "Curățare amănunțită a ramelor și închiderilor ușilor, urmată de aplicarea unui strat protector.",
+      "price": "25 lei"
     },
     "service7": {
-      "name": "Îngrijire exterior",
-      "desc": "Aplicare șampon ceramic — reîmprospătează protecțiile existente.",
-      "price": "75 lei"
+      "name": "Îndepărtare particule de rugină",
+      "desc": "Îndepărtarea delicată a particulelor metalice și a impurităților de pe suprafața vopselei.",
+      "price": "200 lei"
     },
     "service8": {
-      "name": "Îngrijire interior",
-      "desc": "Strat protector lucios, rezistent la UV.",
-      "price": "75 lei"
-    },
-    "service9": {
-      "name": "Îngrijirea zonelor ușilor",
-      "desc": "Curățare și protecție pentru zonele interioare ale ușilor.",
+      "name": "Îngrijire tapițerie",
+      "desc": "Îngrijirea suprafețelor din piele și textile cu un strat protector rezistent la UV.",
       "price": "50 lei"
     },
+    "service9": {
+      "name": "Strat de ceară durabil",
+      "desc": "Ceară hidrofobă de lungă durată, oferind luciu intens și protecție de durată.",
+      "price": "200 lei"
+    },
     "service10": {
-      "name": "Îndepărtare rugină de suprafață",
-      "desc": "Îndepărtarea ruginii fine cauzate de particulele metalice de pe caroserie.",
-      "price": "150 lei"
+      "name": "Îngrijire exterioară",
+      "desc": "Tratament cu șampon ceramic, ce reîmprospătează stratul protector și intensifică luciul.",
+      "price": "25 lei"
     },
     "service11": {
-      "name": "Îngrijire jante",
-      "desc": "Curățare și aplicare strat protector pentru un aspect strălucitor de durată.",
-      "price": "100 lei"
+      "name": "Îngrijire interioară",
+      "desc": "Strat protector lucios, rezistent la UV, pentru bord și suprafețele interioare.",
+      "price": "25 lei"
     },
     "service12": {
-      "name": "Protecție ceară sintetică",
-      "desc": "Aplicare ceară Soft99 Fusso Coat pentru protecție de lungă durată și luciu intens.",
-      "price": "250 lei"
+      "name": "Soluții personalizate",
+      "desc": "Servicii de îngrijire auto adaptate cerințelor individuale.",
+      "price": "În funcție de discuție"
     }
   },
+
   "questions": {
     "faq1": {
       "q": "Cât durează o curățare completă?",
@@ -117,6 +122,15 @@
       "a": "Depinde de serviciu — la lucrări mai ample, da, dar pentru cele de bază poți aștepta la fața locului."
     }
   },
+
+  "references": {
+    "title": "Referințe",
+    "ref1": "Curățare completă interior-exterior, îngrijire și tratare piele.",
+    "ref2": "Curățare completă interior-exterior, îngrijire și curățare Alcantara.",
+    "ref3": "Curățare completă interior-exterior, curățare și întreținere tapițerie.",
+    "ref4": "Curățare și îngrijire interior-exterior."
+  },
+
   "contact": {
     "title": "Contact",
     "address": "Odorheiu Secuiesc, RO",
