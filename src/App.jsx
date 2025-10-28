@@ -10,11 +10,13 @@ import { ASSETS } from './constants';
 
 export default function App() {
 	const { t, i18n } = useTranslation();
-
-	const [darkMode, setDarkMode] = useState(false);
 	const [open, setOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const [showScrollTop, setShowScrollTop] = useState(false);
+	const [darkMode, setDarkMode] = useState(() => {
+		const saved = localStorage.getItem('darkMode');
+		return saved ? JSON.parse(saved) : true; // alapból true, ha nincs mentett érték
+	});
 
 	// Görgetés figyelése (átlátszóság + nyíl megjelenés)
 	useEffect(() => {
@@ -28,7 +30,8 @@ export default function App() {
 
 	// Sötét mód kapcsoló
 	useEffect(() => {
-		document.documentElement.classList.toggle('dark', darkMode);
+	document.documentElement.classList.toggle('dark', darkMode);
+	localStorage.setItem('darkMode', JSON.stringify(darkMode));
 	}, [darkMode]);
 
 	// Navigációs gombok lassú görgetése
@@ -88,14 +91,17 @@ export default function App() {
 								].map(([lang, flag]) => (
 									<button
 										key={lang}
-										onClick={() =>
-											i18n.changeLanguage(lang)
-										}
+										onClick={() => i18n.changeLanguage(lang)}
+										className='transition-transform duration-300 hover:scale-110'
 									>
 										<img
 											src={flag}
 											alt={lang}
-											className='h-6 w-6 rounded-full border border-gray-300'
+											className={`h-6 w-6 rounded-full border border-gray-300 transition-all duration-300 ${
+												i18n.language === lang
+													? 'grayscale-0 opacity-100'
+													: 'grayscale opacity-60'
+											}`}
 										/>
 									</button>
 								))}
@@ -121,6 +127,7 @@ export default function App() {
 
 						{/* MOBIL MENÜ */}
 						<div className='lg:hidden flex items-center gap-2'>
+						
 							{/* ZÁSZLÓK MOBILRA */}
 							<div className='flex items-center gap-2'>
 								{[
@@ -130,14 +137,17 @@ export default function App() {
 								].map(([lang, flag]) => (
 									<button
 										key={lang}
-										onClick={() =>
-											i18n.changeLanguage(lang)
-										}
+										onClick={() => i18n.changeLanguage(lang)}
+										className='transition-transform duration-300 hover:scale-110'
 									>
 										<img
 											src={flag}
 											alt={lang}
-											className='h-5 w-5 rounded-full border border-gray-300'
+											className={`h-5 w-5 rounded-full border border-gray-300 transition-all duration-300 ${
+												i18n.language === lang
+													? 'grayscale-0 opacity-100'
+													: 'grayscale opacity-60'
+											}`}
 										/>
 									</button>
 								))}
