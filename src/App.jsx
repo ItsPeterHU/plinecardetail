@@ -255,7 +255,7 @@ export default function App() {
 						backgroundPosition: 'center',
 					}}
 				>
-					<div className='max-w-3xl mx-auto px-3 py-1 bg-white/50 dark:bg-gray-900/70 rounded-xl shadow backdrop-blur-sm text-center transition-colors duration-500 ease-in-out'>
+					<div className='max-w-3xl mx-auto px-3 py-1 bg-white/20 dark:bg-gray-900/20 rounded-xl shadow backdrop-blur-sm text-center transition-colors duration-500 ease-in-out'>
 						<img
 							src={
 								darkMode ? ASSETS.LOGO_LIGHT : ASSETS.LOGO_DARK
