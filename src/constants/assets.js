@@ -1,6 +1,6 @@
 export const ASSETS = {
   HERO_LIGHT: '/ben-duke-2KT5xGoFf3I-unsplash.jpg',
-  HERO_DARK: '/tai-s-captures-MU85YmmGzOg-unsplash.jpg',
+  HERO_DARK: '/rc-cf-.jpg',
   LOGO_LIGHT: '/p_linecardetail_whiteemblem.png',
   LOGO_DARK: '/p_linecardetail_blackemblem.png',
   REF1: '/LexusIS300h-finish-exterior1.jpeg',
