@@ -30,8 +30,8 @@ export default function App() {
 
 	// Sötét mód kapcsoló
 	useEffect(() => {
-	document.documentElement.classList.toggle('dark', darkMode);
-	localStorage.setItem('darkMode', JSON.stringify(darkMode));
+		document.documentElement.classList.toggle('dark', darkMode);
+		localStorage.setItem('darkMode', JSON.stringify(darkMode));
 	}, [darkMode]);
 
 	// Navigációs gombok lassú görgetése
@@ -91,7 +91,9 @@ export default function App() {
 								].map(([lang, flag]) => (
 									<button
 										key={lang}
-										onClick={() => i18n.changeLanguage(lang)}
+										onClick={() =>
+											i18n.changeLanguage(lang)
+										}
 										className='transition-transform duration-300 hover:scale-110'
 									>
 										<img
@@ -117,9 +119,10 @@ export default function App() {
 									src={darkMode ? ASSETS.SUN : ASSETS.MOON}
 									alt='mode'
 									className={`w-6 h-6 transform transition-all duration-700 ease-in-out 
-										${darkMode 
-											? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_8px_#facc15]' // napfény effekt
-											: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_6px_#60a5fa]' // holdfény effekt
+										${
+											darkMode
+												? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_8px_#facc15]' // napfény effekt
+												: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_6px_#60a5fa]' // holdfény effekt
 										}`}
 								/>
 							</button>
@@ -127,7 +130,6 @@ export default function App() {
 
 						{/* MOBIL MENÜ */}
 						<div className='lg:hidden flex items-center gap-2'>
-						
 							{/* ZÁSZLÓK MOBILRA */}
 							<div className='flex items-center gap-2'>
 								{[
@@ -137,7 +139,9 @@ export default function App() {
 								].map(([lang, flag]) => (
 									<button
 										key={lang}
-										onClick={() => i18n.changeLanguage(lang)}
+										onClick={() =>
+											i18n.changeLanguage(lang)
+										}
 										className='transition-transform duration-300 hover:scale-110'
 									>
 										<img
@@ -163,9 +167,10 @@ export default function App() {
 									src={darkMode ? ASSETS.SUN : ASSETS.MOON}
 									alt='mode'
 									className={`w-6 h-6 transform transition-all duration-700 ease-in-out 
-										${darkMode
-											? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_6px_#facc15]'
-											: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_5px_#60a5fa]'
+										${
+											darkMode
+												? 'rotate-[360deg] scale-110 opacity-90 drop-shadow-[0_0_6px_#facc15]'
+												: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_5px_#60a5fa]'
 										}`}
 								/>
 							</button>
@@ -293,7 +298,9 @@ export default function App() {
 				{/* BEMUTATKOZÁS */}
 				<section
 					id='bemutatkozas'
-					className={`w-full flex justify-center py-16 text-center ${fadeClass('bemutatkozas')}`}
+					className={`w-full flex justify-center py-16 text-center ${fadeClass(
+						'bemutatkozas'
+					)}`}
 				>
 					<div className='max-w-3xl px-4'>
 						<h2 className='text-2xl font-semibold mb-6 text-gray-900 dark:text-white'>
@@ -349,7 +356,7 @@ export default function App() {
 
 					<ExpandableSection
 						sectionId='faq'
-						items={Array.from({ length: 9 }, (_, i) => ({
+						items={Array.from({ length: 12 }, (_, i) => ({
 							q: t(`questions.faq${i + 1}.q`),
 							a: t(`questions.faq${i + 1}.a`),
 						}))}
@@ -395,41 +402,41 @@ export default function App() {
 					</div>
 				</section>
 
-{/* ELÉRHETŐSÉGEK */}
-<section
-	id='elerhetoseg'
-	className='w-full flex justify-center py-16 text-center text-gray-900 dark:text-white'
->
-	<div className='max-w-4xl w-full px-4'>
-		<h2 className='text-2xl font-semibold mb-8'>
-			{t('contact.title')}
-		</h2>
+				{/* ELÉRHETŐSÉGEK */}
+				<section
+					id='elerhetoseg'
+					className='w-full flex justify-center py-16 text-center text-gray-900 dark:text-white'
+				>
+					<div className='max-w-4xl w-full px-4'>
+						<h2 className='text-2xl font-semibold mb-8'>
+							{t('contact.title')}
+						</h2>
 
-		<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center'>
-			<div className='flex flex-col gap-2'>
-				<p>{t('contact.address')}</p>
-				<p>{t('contact.phone')}</p>
-				<p>{t('contact.email')}</p>
-			</div>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center'>
+							<div className='flex flex-col gap-2'>
+								<p>{t('contact.address')}</p>
+								<p>{t('contact.phone')}</p>
+								<p>{t('contact.email')}</p>
+							</div>
 
-			<div className='flex flex-col gap-3'>
-				<a href='#' className='hover:underline'>
-					{t('contact.social.tiktok')}
-				</a>
-				<a href='#' className='hover:underline'>
-					{t('contact.social.instagram')}
-				</a>
-				<a href='#' className='hover:underline'>
-					{t('contact.social.facebook')}
-				</a>
-			</div>
-		</div>
+							<div className='flex flex-col gap-3'>
+								<a href='#' className='hover:underline'>
+									{t('contact.social.tiktok')}
+								</a>
+								<a href='#' className='hover:underline'>
+									{t('contact.social.instagram')}
+								</a>
+								<a href='#' className='hover:underline'>
+									{t('contact.social.facebook')}
+								</a>
+							</div>
+						</div>
 
-		<p className='mt-12 text-center text-gray-600 dark:text-gray-400'>
-			{t('contact.footer')}
-		</p>
-	</div>
-</section>
+						<p className='mt-12 text-center text-gray-600 dark:text-gray-400'>
+							{t('contact.footer')}
+						</p>
+					</div>
+				</section>
 			</main>
 		</div>
 	);
