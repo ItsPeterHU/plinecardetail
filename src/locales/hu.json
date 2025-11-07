@@ -41,17 +41,17 @@
     "service4": {
       "name": "Motortér prémium gondoskodás",
       "desc": "Kímélő tisztítás és ápolás a motortér minden elemén.",
-      "price": "150 lei"
+      "price": "100 lei"
     },
     "service5": {
       "name": "Felnik felületkezelése",
       "desc": "Tisztítás, ápolás és védőbevonat a hosszan tartó fényért és könnyebb tisztíthatóságért.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service6": {
       "name": "Ajtóközök felületkezelése",
       "desc": "Az ajtókeretek és záródási pontok alapos tisztítása, majd védőbevonattal való ápolása.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service7": {
       "name": "Röprozsda eltávolítás",
@@ -121,6 +121,18 @@
     "faq9": {
       "q": "Kell időpontot foglalni?",
       "a": "Igen, minden szolgáltatás előzetes időpontfoglalással történik, hogy az autódra a kellő figyelmet tudjam fordítani — várakozás nélkül, személyre szabottan."
+    },
+    "faq10": {
+      "q": "Felszámítasz felárat a szennyezettség mértéke alapján?",
+      "a": "Igen, mert a nagyobb szennyezettség több időt-vegyszert igényel a tökéletes eredményhez."
+    },
+    "faq11": {
+      "q": "Mi a fontosabb számodra: a mennyiség vagy a minőség?",
+      "a": "Mindig a minőség. A részletesség és precizitás nálam elsődleges."
+    },
+    "faq12": {
+      "q": "Jár kedvezmény visszatérő vásárlóknak?",
+      "a": "Igen, lesz kedvezmény. A rendszer kidolgozás alatt áll."
     }
   },
 

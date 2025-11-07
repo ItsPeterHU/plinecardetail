@@ -40,17 +40,17 @@
     "service4": {
       "name": "Engine Bay Premium Care",
       "desc": "Gentle cleaning and protection of all engine bay components.",
-      "price": "150 lei"
+      "price": "100 lei"
     },
     "service5": {
       "name": "Wheel Surface Treatment",
       "desc": "Cleaning, conditioning, and protective coating for lasting shine and easier maintenance.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service6": {
       "name": "Door Frame Detailing",
       "desc": "Thorough cleaning of door frames and hinges, followed by protective treatment.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service7": {
       "name": "Iron & Rust Particle Removal",
@@ -120,6 +120,18 @@
     "faq9": {
       "q": "Do I need to leave my car?",
       "a": "It depends on the service — for larger jobs yes, for smaller ones you may wait on-site."
+    },
+    "faq10": {
+      "q": "Do you charge extra based on the level of dirtiness?",
+      "a": "Yes, because heavier contamination requires more time and cleaning products to achieve a perfect result."
+    },
+    "faq11": {
+      "q": "What matters more to you: quantity or quality?",
+      "a": "Always quality. Attention to detail and precision are my top priorities."
+    },
+    "faq12": {
+      "q": "Do returning customers get a discount?",
+      "a": "Yes, discounts will be available. The system is currently being developed."
     }
   },
 

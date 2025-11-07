@@ -40,17 +40,17 @@
     "service4": {
       "name": "Îngrijire premium compartiment motor",
       "desc": "Curățare delicată și protejare a tuturor componentelor din compartimentul motor.",
-      "price": "150 lei"
+      "price": "100 lei"
     },
     "service5": {
       "name": "Îngrijire jante",
       "desc": "Curățare, îngrijire și aplicare de strat protector pentru un luciu de durată și curățare ușoară.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service6": {
       "name": "Curățare și protejare praguri uși",
       "desc": "Curățare amănunțită a ramelor și închiderilor ușilor, urmată de aplicarea unui strat protector.",
-      "price": "25 lei"
+      "price": "50 lei"
     },
     "service7": {
       "name": "Îndepărtare particule de rugină",
@@ -120,6 +120,18 @@
     "faq9": {
       "q": "Trebuie să las mașina?",
       "a": "Depinde de serviciu — la lucrări mai ample, da, dar pentru cele de bază poți aștepta la fața locului."
+    },
+    "faq10": {
+      "q": "Percepi un cost suplimentar în funcție de gradul de murdărie?",
+      "a": "Da, deoarece un grad mai mare de murdărie necesită mai mult timp și mai multe produse de curățare pentru un rezultat perfect."
+    },
+    "faq11": {
+      "q": "Ce este mai important pentru tine: cantitatea sau calitatea?",
+      "a": "Întotdeauna calitatea. Atenția la detalii și precizia sunt prioritare pentru mine."
+    },
+    "faq12": {
+      "q": "Oferi reduceri clienților care revin?",
+      "a": "Da, vor exista reduceri. Sistemul este în curs de dezvoltare."
     }
   },
 
