@@ -25,27 +25,27 @@
     "service1": {
       "name": "Spălare exterioară",
       "desc": "Spălare manuală în mai multe etape, folosind produse și tehnici premium.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service2": {
       "name": "Curățare interioară",
       "desc": "Curățarea tapițeriei, bordului și elementelor interioare de praf și murdărie.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service3": {
       "name": "Curățare tapițerie",
       "desc": "Curățare profundă și îndepărtare a petelor de pe suprafețele textile și din piele.",
-      "price": "250 lei"
+      "price": "300 lei"
     },
     "service4": {
       "name": "Îngrijire premium compartiment motor",
       "desc": "Curățare delicată și protejare a tuturor componentelor din compartimentul motor.",
-      "price": "100 lei"
+      "price": "150 lei"
     },
     "service5": {
       "name": "Îngrijire jante",
       "desc": "Curățare, îngrijire și aplicare de strat protector pentru un luciu de durată și curățare ușoară.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service6": {
       "name": "Curățare și protejare praguri uși",
@@ -55,7 +55,7 @@
     "service7": {
       "name": "Îndepărtare particule de rugină",
       "desc": "Îndepărtarea delicată a particulelor metalice și a impurităților de pe suprafața vopselei.",
-      "price": "200 lei"
+      "price": "250 lei"
     },
     "service8": {
       "name": "Îngrijire tapițerie",
@@ -135,13 +135,15 @@
     }
   },
 
-  "references": {
-    "title": "Referințe",
-    "ref1": "Curățare completă interior-exterior, îngrijire și tratare piele.",
-    "ref2": "Curățare completă interior-exterior, îngrijire și curățare Alcantara.",
-    "ref3": "Curățare completă interior-exterior, curățare și întreținere tapițerie.",
-    "ref4": "Curățare și îngrijire interior-exterior."
-  },
+"references": {
+  "title": "Referințe",
+  "ref1": "Curățare exterior-interior, tratament și îngrijire a pielii.",
+  "ref2": "Curățare exterior-interior, tratament și curățare Alcantara.",
+  "ref3": "Curățare exterior-interior, tratament și curățare profundă a tapițeriei.",
+  "ref4": "Curățare și tratament exterior-interior.",
+  "ref5": "Curățare exterior-interior, tratament și curățare profundă a tapițeriei.",
+  "ref6": "Îndepărtarea particulelor de rugină."
+},
 
   "contact": {
     "title": "Contact",

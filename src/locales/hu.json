@@ -26,27 +26,27 @@
     "service1": {
       "name": "Külső mosás",
       "desc": "Alapos, több lépcsős kézi mosás prémium szerekkel és technikával.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service2": {
       "name": "Belső tisztítás",
       "desc": "Kárpit, műszerfal és belső elemek tisztítása portól és szennyeződésektől.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service3": {
       "name": "Kárpittisztítás",
       "desc": "Mélytisztítás és folteltávolítás szövet- és bőrfelületeken.",
-      "price": "250 lei"
+      "price": "300 lei"
     },
     "service4": {
       "name": "Motortér prémium gondoskodás",
       "desc": "Kímélő tisztítás és ápolás a motortér minden elemén.",
-      "price": "100 lei"
+      "price": "150 lei"
     },
     "service5": {
       "name": "Felnik felületkezelése",
       "desc": "Tisztítás, ápolás és védőbevonat a hosszan tartó fényért és könnyebb tisztíthatóságért.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service6": {
       "name": "Ajtóközök felületkezelése",
@@ -56,7 +56,7 @@
     "service7": {
       "name": "Röprozsda eltávolítás",
       "desc": "A fényezésen megtelepedett fémrészecskék és szennyeződések kíméletes, vegyszeres eltávolítása.",
-      "price": "200 lei"
+      "price": "250 lei"
     },
     "service8": {
       "name": "Kárpitápolás",
@@ -138,10 +138,12 @@
 
   "references": {
     "title": "Referenciák",
-    "ref1": "Teljes külső-belső tisztítás, ápolás és bőrápolás.",
-    "ref2": "Teljes külső-belső tisztítás, ápolás és alcantara bőrtisztítás.",
-    "ref3": "Teljes külső-belső, kárpittisztítás és ápolás.",
-    "ref4": "Külső-belső tisztítás és ápolás."
+    "ref1": "Külső-belső tisztítás, ápolás és bőrápolás.",
+    "ref2": "Külső-belső tisztítás, ápolás és alcantara bőrtisztítás.",
+    "ref3": "Külső-belső tisztítás, ápolás és kárpittisztítás.",
+    "ref4": "Külső-belső tisztítás, ápolás.",
+    "ref5": "Külső-belső tisztítás, ápolás és kárpittisztítás.",
+    "ref6": "Röprozsda eltávolítás, ápolás."
   },
 
   "contact": {

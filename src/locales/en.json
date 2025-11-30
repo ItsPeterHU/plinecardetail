@@ -25,27 +25,27 @@
     "service1": {
       "name": "Exterior Wash",
       "desc": "Thorough, multi-step hand wash using premium products and techniques.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service2": {
       "name": "Interior Cleaning",
       "desc": "Cleaning of upholstery, dashboard, and interior components from dust and dirt.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service3": {
       "name": "Upholstery Cleaning",
       "desc": "Deep cleaning and stain removal on fabric and leather surfaces.",
-      "price": "250 lei"
+      "price": "300 lei"
     },
     "service4": {
       "name": "Engine Bay Premium Care",
       "desc": "Gentle cleaning and protection of all engine bay components.",
-      "price": "100 lei"
+      "price": "150 lei"
     },
     "service5": {
       "name": "Wheel Surface Treatment",
       "desc": "Cleaning, conditioning, and protective coating for lasting shine and easier maintenance.",
-      "price": "50 lei"
+      "price": "60 lei"
     },
     "service6": {
       "name": "Door Frame Detailing",
@@ -55,7 +55,7 @@
     "service7": {
       "name": "Iron & Rust Particle Removal",
       "desc": "Gentle chemical removal of embedded metal and rust particles from paint surfaces.",
-      "price": "200 lei"
+      "price": "250 lei"
     },
     "service8": {
       "name": "Upholstery Care",
@@ -135,13 +135,15 @@
     }
   },
 
-  "references": {
-    "title": "References",
-    "ref1": "Full exterior and interior cleaning, care, and leather treatment.",
-    "ref2": "Full exterior and interior cleaning, care, and Alcantara leather cleaning.",
-    "ref3": "Full exterior and interior cleaning with upholstery care and maintenance.",
-    "ref4": "Exterior and interior cleaning and care."
-  },
+"references": {
+  "title": "References",
+  "ref1": "Exterior and interior cleaning, treatment and leather care.",
+  "ref2": "Exterior and interior cleaning, treatment and Alcantara leather cleaning.",
+  "ref3": "Exterior and interior cleaning, treatment and upholstery deep cleaning.",
+  "ref4": "Exterior and interior cleaning and treatment.",
+  "ref5": "Exterior and interior cleaning, treatment and upholstery deep cleaning.",
+  "ref6": "Iron fallout removal."
+},
 
   "contact": {
     "title": "Contact",
