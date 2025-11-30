@@ -7,6 +7,10 @@ export const ASSETS = {
   REF2: '/MercedesBenzGLA200-finish-exterior1.jpeg',
   REF3: '/VolkswagenPASSAT2.0TDI-interior1.jpeg',
   REF4: '/SkodaOCTAVIAexterior1.jpeg',
+  REF5: '/VolkswagenT-ROCexterior1.jpeg',
+  REF6: '/AudiA1-Exterior1.jpeg',
+  REF7: '/KiaSportage-Exterior1.jpeg',
+  REF8: '/SuzukiVitara-Exterior1.jpeg',
   TIKTOK: '/tik-tok.png',
   INSTAGRAM: '/instagram.png',
   FACEBOOK: '/facebook.png',
@@ -21,4 +25,6 @@ export const ASSETS = {
   ENGLAND: '/united-kingdom.png',
   PLUS: '/plus.png',
   MINUS: '/minus.png',
+  FORWARD: '/right-arrow.png',
+  BACKWARD: '/back-arrow.png',
 };
