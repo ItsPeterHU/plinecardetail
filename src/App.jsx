@@ -17,6 +17,91 @@ export default function App() {
 		const saved = localStorage.getItem('darkMode');
 		return saved ? JSON.parse(saved) : true; // alapból true, ha nincs mentett érték
 	});
+	const [lightboxOpen, setLightboxOpen] = useState(false);
+	const [lightboxImages, setLightboxImages] = useState([]);
+	const [lightboxIndex, setLightboxIndex] = useState(0);
+
+	const openLightbox = (images, startIndex = 0) => {
+	setLightboxImages(images);
+	setLightboxIndex(startIndex);
+	setLightboxOpen(true);
+	};
+
+	const closeLightbox = () => {
+	setLightboxOpen(false);
+	setLightboxImages([]);
+	setLightboxIndex(0);
+	};
+
+	const showPrev = () => {
+	setLightboxIndex((prev) =>
+		prev === 0 ? lightboxImages.length - 1 : prev - 1
+	);
+	};
+
+	const showNext = () => {
+	setLightboxIndex((prev) =>
+		prev === lightboxImages.length - 1 ? 0 : prev + 1
+	);
+	};
+
+	const references = [
+	{
+		title: 'Lexus IS',
+		note: t('references.ref1'),
+		images: [ASSETS.REF1] // ide később betehetsz több képet is: [ASSETS.REF1_1, ASSETS.REF1_2, ASSETS.REF1_3]
+	},
+	{
+		title: 'Mercedes-Benz GLA',
+		note: t('references.ref2'),
+		images: [ASSETS.REF2]
+	},
+	{
+		title: 'Volkswagen PASSAT',
+		note: t('references.ref3'),
+		images: [ASSETS.REF3]
+	},
+	{
+		title: 'Skoda OCTAVIA',
+		note: t('references.ref4'),
+		images: [ASSETS.REF4]
+	},
+	{
+		title: 'Volkswagen T-ROC',
+		note: t('references.ref5'),
+		images: [ASSETS.REF5]
+	},
+	{
+		title: 'Audi A1',
+		note: t('references.ref4'),
+		images: [ASSETS.REF6]
+	},
+	{
+		title: 'Kia Sportage',
+		note: t('references.ref4'),
+		images: [ASSETS.REF7]
+	},
+	{
+		title: 'Suzuki Vitara',
+		note: t('references.ref6'),
+		images: [ASSETS.REF8]
+	}
+	];
+
+	const [refIndex, setRefIndex] = useState(0);
+
+	const visibleRefs = references.slice(refIndex, refIndex + 2);
+
+	const canPrev = refIndex > 0;
+	const canNext = refIndex + 2 < references.length;
+
+	const prevRefs = () => {
+	if (canPrev) setRefIndex(refIndex - 2);
+	};
+
+	const nextRefs = () => {
+	if (canNext) setRefIndex(refIndex + 2);
+	};
 
 	// Görgetés figyelése (átlátszóság + nyíl megjelenés)
 	useEffect(() => {
@@ -110,7 +195,7 @@ export default function App() {
 							</div>
 
 							{/* DARK MODE */}
-							<button
+							{/* <button
 								onClick={() => setDarkMode(!darkMode)}
 								className='ml-4 relative p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out group'
 								aria-label='Dark mode toggle'
@@ -125,7 +210,7 @@ export default function App() {
 												: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_6px_#60a5fa]' // holdfény effekt
 										}`}
 								/>
-							</button>
+							</button> */}
 						</nav>
 
 						{/* MOBIL MENÜ */}
@@ -158,7 +243,7 @@ export default function App() {
 							</div>
 
 							{/* DARK MODE - MOBILE */}
-							<button
+							{/* <button
 								onClick={() => setDarkMode(!darkMode)}
 								className='p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-500 ease-in-out group'
 								aria-label='Dark mode toggle'
@@ -173,7 +258,7 @@ export default function App() {
 												: 'rotate-0 scale-100 opacity-100 drop-shadow-[0_0_5px_#60a5fa]'
 										}`}
 								/>
-							</button>
+							</button> */}
 
 							{/* SZENDVICSMENÜ */}
 							<button
@@ -240,6 +325,55 @@ export default function App() {
 						className='w-6 h-6'
 					/>
 				</button>
+			)}
+
+			{lightboxOpen && lightboxImages.length > 0 && (
+			<div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
+				{/* Bezárás */}
+				<button
+				onClick={closeLightbox}
+				className="absolute top-4 right-4 text-white text-2xl hover:scale-110 transition-transform"
+				aria-label="Close"
+				>
+				✕
+				</button>
+
+				{/* Előző */}
+				{lightboxImages.length > 1 && (
+				<button
+					onClick={showPrev}
+					className="absolute left-4 md:left-10 text-white text-3xl hover:scale-110 transition-transform"
+					aria-label="Previous image"
+				>
+					‹
+				</button>
+				)}
+
+				{/* Kép */}
+				<img
+				src={lightboxImages[lightboxIndex]}
+				alt="reference"
+				className="max-h-[80vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+				/>
+
+				{/* Következő */}
+				{lightboxImages.length > 1 && (
+				<button
+					onClick={showNext}
+					className="absolute right-4 md:right-10 text-white text-3xl hover:scale-110 transition-transform"
+					aria-label="Next image"
+				>
+					›
+				</button>
+				)}
+
+				{/* Számláló */}
+				{lightboxImages.length > 1 && (
+				<div className="absolute bottom-6 text-sm text-gray-200">
+					{lightboxIndex + 1} / {lightboxImages.length}
+				</div>
+				)}
+			</div>
 			)}
 
 			{/* === HERO + TÖBBI SZEKCIÓ === */}
@@ -369,37 +503,62 @@ export default function App() {
 
 				{/* REFERENCIÁK */}
 				<section
-					id='referenciak'
-					className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center ${fadeClass(
-						'referenciak'
-					)}`}
+				id='referenciak'
+				className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center ${fadeClass(
+					'referenciak'
+				)}`}
 				>
-					<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
-						{t('nav.references')}
-					</h2>
+				<h2 className='text-2xl font-semibold mb-8 text-gray-900 dark:text-white'>
+					{t('nav.references')}
+				</h2>
 
-					<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-						<ReferenceCard
-							img={ASSETS.REF1}
-							title='Lexus IS300h'
-							note={t('references.ref1')}
+				{/* Lapozó gombok */}
+				<div className="flex justify-center items-center gap-6 mb-6">
+					<button
+					onClick={prevRefs}
+					disabled={!canPrev}
+					className={`p-3 rounded-full border ${
+						canPrev
+						? 'hover:bg-gray-200 dark:hover:bg-gray-700'
+						: 'opacity-40 cursor-not-allowed'
+					}`}
+					>
+					    <img 
+						src={ASSETS.BACKWARD} 
+						alt="Previous" 
+						className="w-3 h-3 object-contain" 
 						/>
-						<ReferenceCard
-							img={ASSETS.REF2}
-							title='Mercedes-Benz GLA200'
-							note={t('references.ref2')}
+					</button>
+
+					<button
+					onClick={nextRefs}
+					disabled={!canNext}
+					className={`p-3 rounded-full border ${
+						canNext
+						? 'hover:bg-gray-200 dark:hover:bg-gray-700'
+						: 'opacity-40 cursor-not-allowed'
+					}`}
+					>
+						<img 
+						src={ASSETS.FORWARD} 
+						alt="Previous" 
+						className="w-3 h-3 object-contain" 
 						/>
-						<ReferenceCard
-							img={ASSETS.REF3}
-							title='Volkswagen PASSAT 2.0TDI'
-							note={t('references.ref3')}
-						/>
-						<ReferenceCard
-							img={ASSETS.REF4}
-							title='Skoda OCTAVIA'
-							note={t('references.ref4')}
-						/>
-					</div>
+					</button>
+				</div>
+
+				{/* A két látható referencia */}
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+					{visibleRefs.map((ref) => (
+					<ReferenceCard
+						key={ref.title}
+						title={ref.title}
+						note={ref.note}
+						images={ref.images}
+						onOpen={openLightbox}
+					/>
+					))}
+				</div>
 				</section>
 
 				{/* ELÉRHETŐSÉGEK */}
